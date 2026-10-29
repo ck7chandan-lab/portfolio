@@ -147,6 +147,9 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
 .pill-pub { background: color-mix(in srgb, var(--ok) 15%, transparent); color: var(--ok); }
 .pill-draft { background: color-mix(in srgb, var(--warn) 15%, transparent); color: var(--warn); }
 .drag { cursor: grab; }
+.plist, .mg, .mb-tools, .is-dragging, .is-dragging * { -webkit-user-select: none; user-select: none; }
+.mg-item img { -webkit-user-drag: none; pointer-events: none; }
+.sortable-fallback { opacity: .9 !important; box-shadow: 0 12px 30px rgba(0,0,0,.25); }
 .sortable-ghost { opacity: .35; }
 .sortable-chosen { box-shadow: var(--shadow); }
 .star[aria-pressed="true"] { color: #D99A00; }

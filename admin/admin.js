@@ -538,8 +538,8 @@
     }
     draw();
     if (window.Sortable) {
-      window.Sortable.create(list, {
-        animation: 150, handle: ".drag, .pcard-title", disabled: false,
+      window.Sortable.create(list, { forceFallback: true, fallbackTolerance: 3, onStart: function () { document.body.classList.add("is-dragging"); }, onUnchoose: function () { document.body.classList.remove("is-dragging"); },
+        animation: 150, handle: ".drag, .pcard-body", filter: "button", preventOnFilter: false,
         onEnd: function (e) {
           if (e.oldIndex === e.newIndex || S.filter) { draw(); return; }
           var item = P.splice(e.oldIndex, 1)[0]; P.splice(e.newIndex, 0, item); markDirty("projects"); draw();
@@ -686,7 +686,7 @@
       });
       canvas.appendChild(insertLine(p.modules.length));
       if (window.Sortable) {
-        window.Sortable.create(canvas, {
+        window.Sortable.create(canvas, { forceFallback: true, fallbackTolerance: 3, onStart: function () { document.body.classList.add("is-dragging"); }, onUnchoose: function () { document.body.classList.remove("is-dragging"); },
           animation: 150, handle: ".mb-handle", draggable: ".mb",
           onEnd: function (e) {
             var blocks = Array.prototype.slice.call(canvas.querySelectorAll(".mb"));
@@ -793,7 +793,7 @@
           iconBtn("close", "Remove image", function () { m.images.splice(k, 1); dirty(); drawCanvas(); })));
       });
       if (window.Sortable && m.images.length > 1) {
-        window.Sortable.create(grid, { animation: 150, onEnd: function (e) {
+        window.Sortable.create(grid, { forceFallback: true, fallbackTolerance: 3, onStart: function () { document.body.classList.add("is-dragging"); }, onUnchoose: function () { document.body.classList.remove("is-dragging"); }, animation: 150, onEnd: function (e) {
           if (e.oldIndex === e.newIndex) return;
           m.images.splice(e.newIndex, 0, m.images.splice(e.oldIndex, 1)[0]); dirty(); drawCanvas();
         } });
