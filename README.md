@@ -1,108 +1,120 @@
 # Chandan Kumar — Portfolio Site
 
-A Behance-style portfolio: profile sidebar, tabbed project grid, and full-width case-study pages.
-It's a plain static site (HTML, CSS, JS) — no build step — so it runs on any host.
-All content lives in two files, which you edit from a browser with **Pages CMS**:
+A Behance-style portfolio with its own admin panel.
 
-| What | File |
+- **Site:** profile sidebar, Work / About / Experience / **Resume** tabs, a filterable project grid, and full-width case-study pages.
+- **Resume tab:** visitors read your CV on the page and download it as **PDF** or **Word (.docx)**. Both files are created from your resume content, so they always match what you last saved.
+- **Admin panel (`/admin`):** add and edit projects the Behance way (images, text, photo grids, video/Figma embeds, spacers, background colour, cover, tags, draft/published), edit your profile, and edit your resume.
+
+It's a plain static site (HTML, CSS, JS) with no build step and no server, so it's free to host.
+
+| Content | File |
 | --- | --- |
-| Projects / case studies | `data/projects.json` |
-| Name, photo, CV, about, skills, experience, certifications | `data/site.json` |
-| Uploaded images and PDFs | `assets/uploads/` |
+| Projects | `data/projects.json` |
+| Profile (name, photo, about, skills, tools) | `data/site.json` |
+| Resume | `data/resume.json` |
+| Uploaded images, videos, files | `assets/uploads/` |
+
+You normally never touch these files — the admin panel edits them for you.
 
 ---
 
-## 1. Preview it on your Mac
+## 1. Preview on your Mac
 
-The page loads its content with JavaScript, so open it through a small local server
+The site loads its content with JavaScript, so open it through a small local server
 (double-clicking `index.html` won't load the projects).
 
-**Option A — Terminal (nothing to install):**
 ```bash
 cd ~/Documents/"Chandan portfolio site"
 python3 -m http.server 5500
 ```
-Then open http://localhost:5500. Press `Ctrl + C` to stop.
 
-**Option B — Cursor / VS Code:** open the folder, install the recommended *Live Server*
-extension, right-click `index.html` → **Open with Live Server**.
+- Site: http://localhost:5500
+- Admin: http://localhost:5500/admin
 
-**Option C — Node:** `npm run dev`, then open http://localhost:5500.
+Press `Ctrl + C` in Terminal to stop. (In Cursor/VS Code you can also use the *Live Server* extension.)
+
+### Edit locally (before the site is online)
+Open http://localhost:5500/admin in **Chrome or Edge** → **Choose site folder** → pick
+`Documents/Chandan portfolio site`. Everything you save is written straight into that folder.
 
 ---
 
-## 2. Put it online — GitHub Pages (free, recommended)
+## 2. Put it online — GitHub Pages (free)
 
-1. Create a free account at https://github.com (if you don't have one).
-2. Click **New repository**. Name it exactly **`<your-username>.github.io`**
-   (e.g. `chandankumar-ux.github.io`). Set it to **Public**. Create it.
-3. Upload the site:
-   - Easiest: install **GitHub Desktop** (https://desktop.github.com), sign in, choose
-     *File → Add local repository* → pick `Documents/Chandan portfolio site` → *create a repository* →
-     **Publish repository** to the repo you just made (untick "Keep this code private").
-   - Or in the browser: *Add file → Upload files*, drag in everything in the folder.
-     On a Mac, press `Cmd + Shift + .` in Finder to show hidden files so `.pages.yml` and
-     `.nojekyll` are included.
-4. In the repo: **Settings → Pages → Build and deployment → Source: Deploy from a branch**,
-   Branch: `main`, folder: `/ (root)` → **Save**.
-5. After a minute your site is live at `https://<your-username>.github.io`.
+1. Create a free account at https://github.com.
+2. **New repository** → name it exactly **`<your-username>.github.io`** → **Public** → Create.
+3. Install **GitHub Desktop** (https://desktop.github.com) and sign in.
+   *File → Add local repository* → choose `Documents/Chandan portfolio site` → **Publish repository**
+   (untick "Keep this code private"), and pick the repository you just created.
+4. On github.com, open the repository → **Settings → Pages** → Source: *Deploy from a branch*,
+   Branch: `main`, Folder: `/ (root)` → **Save**.
+5. About a minute later your site is live at `https://<your-username>.github.io`.
 
-## 3. Turn on the admin panel (Pages CMS)
+## 3. Use the admin panel on the live site
 
-1. Go to https://app.pagescms.org and **Sign in with GitHub**.
-2. When asked, **install the Pages CMS GitHub App** on your account and give it access to the
-   portfolio repository.
-3. Open the repository. You'll see **Projects (case studies)** and **Profile & site settings**.
-4. Add a project: fill in the title, a unique URL name (e.g. `bank-onboarding-app`), category,
-   summary, a 4:3 cover image, the case-study text, and gallery images (shown full-width,
-   one after another — like Behance). **Save**.
-5. Every save is a commit to GitHub, and GitHub Pages republishes the site within a minute or two.
+1. Create an access token (one time):
+   https://github.com/settings/personal-access-tokens/new
+   - **Repository access:** Only select repositories → your portfolio repository
+   - **Permissions → Repository permissions → Contents:** *Read and write*
+   - Expiration: up to 1 year → **Generate token** → copy it.
+2. Open `https://<your-username>.github.io/admin`, paste the token, tick
+   *Remember me on this computer*, and click **Connect & edit**.
+3. Edit, then **Save** (or Ctrl/Cmd + S). Each save is one commit; the live site updates in about a minute.
 
-Tips
-- Category becomes a filter chip automatically. Reuse the same spelling to group projects.
-- Export your Behance images while logged in to Behance, then upload them here as cover and gallery images.
-- Recommended sizes: cover 1600 × 1200 (4:3); gallery images 1920 px wide, JPG/WebP under ~1 MB each.
-- Add your profile photo and CV (PDF) under **Profile & site settings** — the CV button appears once a file is set.
+The token only works for this one repository and is stored only in your own browser.
+Treat it like a password: don't share it, and use *Settings → Forget token* on shared computers.
+The admin page itself is public but useless without your token.
 
-## 4. Use your own domain (optional, ~₹800–1,500/year)
+### Adding a project
+1. **Projects → New project.**
+2. Right panel: upload a **cover** (auto-cropped to 4:3), fill in title, summary, category
+   (becomes a filter chip), client, role, year, tools, tags.
+3. Build the canvas like Behance: **Image**, **Text**, **Photo grid**, **Video / embed**
+   (YouTube, Vimeo, Loom, Figma links, or upload an MP4), **Spacer**. Drag images straight onto the
+   canvas. Hover a block to move it, duplicate it or delete it; use the **+** between blocks to insert.
+4. Optional: pick a **canvas background** colour.
+5. Keep it as **Draft** while you work; switch to **Published** when ready. **Preview** shows unsaved changes.
+6. **Save.** Drag project cards on the Projects screen to change their order.
 
-1. Buy a domain (e.g. `chandankumar.design` or `chandankumar.in`) from GoDaddy, Hostinger, Namecheap or Cloudflare.
-2. In the repo: **Settings → Pages → Custom domain** → enter it → Save.
+Images are resized for the web automatically (covers 1600 × 1200, content images up to 2400 px wide).
+
+### Editing your resume
+**Resume** in the admin: header, summary, expertise groups, experience (one achievement per line),
+education, certifications, key projects, languages. The live preview updates as you type, and
+**Test PDF / Test Word** download the exact files visitors will get. If you'd rather share a
+specially designed file, upload your own PDF/Word under *Download files*.
+
+---
+
+## 4. Custom domain (optional, ~₹800–1,500/year)
+
+1. Buy a domain (e.g. `chandankumar.design`) from GoDaddy, Hostinger, Namecheap or Cloudflare.
+2. Repository → **Settings → Pages → Custom domain** → enter it → Save.
 3. At your domain provider, add DNS records:
    - `A` records for `@` → `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`
    - `CNAME` for `www` → `<your-username>.github.io`
 4. Wait for DNS (minutes to a few hours), then tick **Enforce HTTPS**.
 
----
+The admin keeps working at `https://yourdomain/admin` (it still saves to the GitHub repository).
 
-## Other hosting options
+## Other hosting
 
-**Netlify / Cloudflare Pages (also free):** connect the same GitHub repo, leave the build command empty,
-and set the publish/output directory to the repo root (`.` or `/`). Pages CMS works the same way.
+**Netlify / Cloudflare Pages (free):** connect the same GitHub repo, leave the build command empty,
+output directory `/`. The admin works the same way because it saves to GitHub.
 
-**Shared hosting with cPanel (Hostinger, GoDaddy, Bluehost):** zip the folder contents, upload to
-`public_html` with File Manager, and extract. Note: the CMS edits GitHub, so with this option you'd
-re-upload `data/` and `assets/uploads/` after changes — or use the host's Git deployment feature.
+**cPanel shared hosting (Hostinger, GoDaddy):** upload the folder contents to `public_html`. The site works,
+but the admin's GitHub saving won't reach that server — edit locally with *Choose site folder* and re-upload
+`data/` and `assets/uploads/`, or use the host's Git deployment.
 
-## Editing by hand
+## What's in the folder
 
-If you prefer, edit `data/projects.json` directly. Each project looks like:
-
-```json
-{
-  "slug": "my-project",
-  "title": "My Project",
-  "client": "Company",
-  "category": "Mobile app",
-  "domain": "Fintech",
-  "year": "2025",
-  "role": "Lead Product Designer",
-  "tools": ["Figma"],
-  "featured": false,
-  "summary": "One line about the project.",
-  "cover": "/assets/uploads/my-cover.jpg",
-  "body": "## Overview\n\nMarkdown text…",
-  "gallery": [{ "image": "/assets/uploads/screen-1.jpg", "caption": "Home screen" }],
-  "link": ""
-}
+```
+index.html              the site
+404.html                page shown for broken links
+admin/                  the admin panel
+assets/css, assets/js   site styles and scripts
+assets/vendor/          PDF, Word, drag-and-drop and text-formatting libraries (bundled, no CDN needed)
+assets/uploads/         your images and files
+data/                   your content (projects, profile, resume)
 ```
