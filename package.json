@@ -1,0 +1,10 @@
+{
+  "name": "chandan-portfolio-site",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Chandan Kumar — portfolio website (static, CMS-editable)",
+  "scripts": {
+    "dev": "npx --yes serve@14.2.4 . -l 5500",
+    "start": "npx --yes serve@14.2.4 . -l 5500"
+  }
+}
