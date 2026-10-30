@@ -65,7 +65,7 @@ window.CK_DATA["data/projects.json"] = [
   {
     "slug": "centauri-ai-healthcare",
     "title": "Centauri — AI Healthcare Platform",
-    "status": "published",
+    "status": "draft",
     "featured": true,
     "client": "Innova Solutions",
     "category": "Enterprise SaaS",
