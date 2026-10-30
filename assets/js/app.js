@@ -337,6 +337,9 @@
   }
 
   function load(path) {
+    if (location.protocol === "file:" && window.CK_DATA && window.CK_DATA[path]) {
+      return Promise.resolve(JSON.parse(JSON.stringify(window.CK_DATA[path])));
+    }
     if (PREVIEW) {
       try {
         var draft = localStorage.getItem("ck-preview:" + path);

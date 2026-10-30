@@ -1,0 +1,40 @@
+window.CK_DATA = window.CK_DATA || {};
+window.CK_DATA["data/site.json"] = {
+  "name": "Chandan Kumar",
+  "role": "Principal UI/UX & Product Designer",
+  "headline": "I design enterprise products that stay clear under pressure — from AI-assisted clinical workflows to high-volume D2C storefronts.",
+  "intro": "Nine-plus years shaping products across healthcare, fintech, government, D2C and e-commerce. I work end to end: research, flows, design systems, and front-end prototypes in HTML, CSS and JS.",
+  "location": "Delhi, India",
+  "availability": "Open to new roles",
+  "email": "chandanmodi1310@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/chandan-kumar-uxdesigner",
+  "behance": "",
+  "cv": "",
+  "photo": "",
+  "about": "I'm a Principal UI/UX & Product Designer with a design-engineering bent. I started in visual and web design, moved into product, and today lead UX for complex, data-heavy platforms where accuracy and trust matter as much as speed.\n\nMy work sits where research, systems thinking and craft meet. I map messy workflows, turn them into calm interfaces, and build the design systems and coded prototypes that let engineering ship them faithfully. Lately much of that work involves AI: designing human-in-the-loop flows where people can see, check and override what a model suggests.\n\nI've designed for regulated healthcare, a government enterprise dashboard, fintech, and D2C beauty brands, where checkout and discovery work lifted conversion by 6.5% and retention by 15%.",
+  "skills": [
+    "UX strategy & research",
+    "Information architecture",
+    "Interaction design",
+    "Design systems",
+    "Data-dense dashboards",
+    "AI / human-in-the-loop UX",
+    "Accessibility (WCAG)",
+    "Prototyping in HTML/CSS/JS"
+  ],
+  "tools": [
+    "Figma",
+    "FigJam",
+    "Adobe XD",
+    "Sketch",
+    "Framer",
+    "Photoshop",
+    "Illustrator",
+    "HTML / CSS / JS",
+    "React",
+    "Cursor AI",
+    "Claude",
+    "v0",
+    "Lovable"
+  ]
+};

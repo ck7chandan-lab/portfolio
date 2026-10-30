@@ -317,6 +317,10 @@
     }
     return null;
   }
+  // Copy of the data as a script, so the site also opens by double-clicking index.html
+  function jsCopy(path, data) {
+    return "window.CK_DATA = window.CK_DATA || {};\nwindow.CK_DATA[" + JSON.stringify(path) + "] = " + JSON.stringify(data, null, 2) + ";\n";
+  }
   function referencedPaths() {
     var txt = JSON.stringify(S.data);
     return Object.keys(S.pending).filter(function (p) { return txt.indexOf(p) > -1; });
@@ -327,7 +331,10 @@
     if (problem) { toast(problem, true); return Promise.resolve(); }
     var files = [];
     Object.keys(FILES).forEach(function (k) {
-      if (S.dirty[k]) files.push({ path: FILES[k], content: JSON.stringify(S.data[k], null, 2) + "\n" });
+      if (S.dirty[k]) {
+        files.push({ path: FILES[k], content: JSON.stringify(S.data[k], null, 2) + "\n" });
+        files.push({ path: FILES[k].replace(/\.json$/, ".js"), content: jsCopy(FILES[k], S.data[k]) });
+      }
     });
     var media = referencedPaths();
     media.forEach(function (p) { files.push({ path: p, content: S.pending[p].blob }); });
