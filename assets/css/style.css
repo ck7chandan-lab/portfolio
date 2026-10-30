@@ -190,7 +190,7 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-
 .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 28px 22px; }
 .card { display: flex; flex-direction: column; gap: 10px; text-decoration: none; min-width: 0; }
 .card-cover {
-  position: relative; aspect-ratio: 1140 / 1170; max-width: 100%; border-radius: var(--radius); overflow: hidden;
+  position: relative; aspect-ratio: 1440 / 1170; max-width: 100%; border-radius: var(--radius); overflow: hidden;
   background: var(--line);
 }
 .card-cover img { width: 100%; height: 100%; object-fit: cover; transition: transform .4s ease; }

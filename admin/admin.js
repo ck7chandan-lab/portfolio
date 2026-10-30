@@ -259,7 +259,7 @@
       });
     });
   }
-  var PRESET = { cover: { w: 1140, h: 1170, crop: true }, avatar: { w: 640, h: 640, crop: true }, content: { max: 2400 }, none: null };
+  var PRESET = { cover: { w: 1440, h: 1170, crop: true }, avatar: { w: 640, h: 640, crop: true }, content: { max: 2400 }, none: null };
   function upload(file, preset, prefix) {
     if (file.size > 40e6) return Promise.reject(new Error(file.name + " is larger than 40 MB. Compress it first."));
     var p = preset ? processImage(file, preset) : Promise.resolve({ blob: file, ext: (file.name.split(".").pop() || "bin").toLowerCase() });
@@ -359,6 +359,115 @@
       store("ck-preview:" + FILES[k], JSON.parse(json));
     });
     window.open("../index.html?preview=1" + (hash ? "#" + hash : ""), "ck-preview");
+  }
+
+
+  /* ================= Cover cropper (drag to move, zoom, fill or fit) ================= */
+  function cropper(srcUrl, outW, outH, title) {
+    return new Promise(function (resolve, reject) {
+      var img = new Image();
+      if (/^https?:/.test(srcUrl) && srcUrl.indexOf(location.origin) !== 0) img.crossOrigin = "anonymous";
+      img.onerror = function () { reject(new Error("load")); };
+      img.onload = function () { open(img); };
+      img.src = srcUrl;
+
+      function open(img) {
+        var iw = img.naturalWidth, ih = img.naturalHeight;
+        var m = document.getElementById("modal");
+        var stage = h("div", { class: "crop-stage", tabindex: "0", "aria-label": "Crop area. Drag or use arrow keys to move the image." });
+        var pic = h("img", { src: srcUrl, alt: "", draggable: "false" });
+        if (img.crossOrigin) pic.crossOrigin = "anonymous";
+        stage.appendChild(pic);
+        stage.appendChild(h("div", { class: "crop-grid", "aria-hidden": "true" }));
+        var zoom = h("input", { type: "range", id: "cropZoom", min: "0", max: "1000", value: "0", "aria-label": "Zoom" });
+        var bg = h("input", { type: "color", id: "cropBg", value: "#ffffff", "aria-label": "Background colour for empty space" });
+        var info = h("span", { class: "muted mono" });
+        var st = { s: 1, x: 0, y: 0, W: 0, H: 0 };
+        var cover = function () { return Math.max(st.W / iw, st.H / ih); };
+        var contain = function () { return Math.min(st.W / iw, st.H / ih); };
+        var minS = function () { return contain(); };
+        var maxS = function () { return cover() * 4; };
+        var sliderToScale = function (v) { var a = minS(), b = maxS(); return a * Math.pow(b / a, v / 1000); };
+        var scaleToSlider = function (sc) { var a = minS(), b = maxS(); return Math.round(1000 * Math.log(sc / a) / Math.log(b / a)); };
+        function clamp() {
+          var w = iw * st.s, hh = ih * st.s;
+          st.x = w >= st.W ? Math.min(0, Math.max(st.W - w, st.x)) : Math.max(0, Math.min(st.W - w, st.x));
+          st.y = hh >= st.H ? Math.min(0, Math.max(st.H - hh, st.y)) : Math.max(0, Math.min(st.H - hh, st.y));
+        }
+        function draw() {
+          clamp();
+          pic.style.width = (iw * st.s) + "px"; pic.style.height = (ih * st.s) + "px";
+          pic.style.transform = "translate(" + st.x + "px," + st.y + "px)";
+          stage.style.background = bg.value;
+          var pct = Math.round(st.s / cover() * 100);
+          info.textContent = "Original " + iw + " × " + ih + " · " + (pct >= 100 ? "fills frame" : "shows whole image") + " · " + pct + "%";
+        }
+        function setScale(ns, cx, cy) {
+          ns = Math.max(minS(), Math.min(maxS(), ns));
+          cx = cx == null ? st.W / 2 : cx; cy = cy == null ? st.H / 2 : cy;
+          st.x = cx - (cx - st.x) * ns / st.s; st.y = cy - (cy - st.y) * ns / st.s; st.s = ns;
+          zoom.value = scaleToSlider(ns); draw();
+        }
+        function center(sc) { st.s = sc; st.x = (st.W - iw * sc) / 2; st.y = (st.H - ih * sc) / 2; zoom.value = scaleToSlider(sc); draw(); }
+        function measure() {
+          var r = stage.getBoundingClientRect(), old = st.W;
+          st.W = r.width; st.H = r.height;
+          if (!old) center(cover()); else { var k = st.W / old; st.s *= k; st.x *= k; st.y *= k; draw(); }
+        }
+        // drag
+        var drag = null;
+        stage.addEventListener("pointerdown", function (e) { drag = { x: e.clientX, y: e.clientY, sx: st.x, sy: st.y }; stage.setPointerCapture(e.pointerId); stage.classList.add("dragging"); });
+        stage.addEventListener("pointermove", function (e) { if (!drag) return; st.x = drag.sx + e.clientX - drag.x; st.y = drag.sy + e.clientY - drag.y; draw(); });
+        var end = function () { drag = null; stage.classList.remove("dragging"); };
+        stage.addEventListener("pointerup", end); stage.addEventListener("pointercancel", end);
+        stage.addEventListener("wheel", function (e) {
+          e.preventDefault();
+          var r = stage.getBoundingClientRect();
+          setScale(st.s * Math.exp(-e.deltaY * 0.0015), e.clientX - r.left, e.clientY - r.top);
+        }, { passive: false });
+        stage.addEventListener("keydown", function (e) {
+          var d = e.shiftKey ? 40 : 10, k = { ArrowLeft: [d, 0], ArrowRight: [-d, 0], ArrowUp: [0, d], ArrowDown: [0, -d] }[e.key];
+          if (k) { e.preventDefault(); st.x += k[0]; st.y += k[1]; draw(); }
+          if (e.key === "+" || e.key === "=") setScale(st.s * 1.1);
+          if (e.key === "-") setScale(st.s / 1.1);
+        });
+        zoom.addEventListener("input", function () { setScale(sliderToScale(+zoom.value)); });
+        bg.addEventListener("input", draw);
+
+        function close(v) { window.removeEventListener("resize", measure); document.removeEventListener("keydown", esc); m.hidden = true; m.innerHTML = ""; m.onclick = null; resolve(v); }
+        function esc(e) { if (e.key === "Escape") close(null); }
+        function apply() {
+          var c = document.createElement("canvas"); c.width = outW; c.height = outH;
+          var ctx = c.getContext("2d"), k = outW / st.W;
+          ctx.fillStyle = bg.value; ctx.fillRect(0, 0, outW, outH);
+          ctx.imageSmoothingQuality = "high";
+          try {
+            ctx.drawImage(img, st.x * k, st.y * k, iw * st.s * k, ih * st.s * k);
+            c.toBlob(function (b) { close(b); }, "image/jpeg", 0.9);
+          } catch (err) { close(null); reject(err); }
+        }
+        m.innerHTML = "";
+        m.appendChild(h("div", { class: "modal-box crop-box", role: "dialog", "aria-modal": "true", "aria-label": title },
+          h("div", { class: "crop-head" }, h("h2", { text: title }), h("span", { class: "muted mono", text: outW + " × " + outH + " px" })),
+          h("p", { class: "muted", style: { margin: "0 0 12px" }, text: "Drag the image to position it. Use the slider or your trackpad to zoom." }),
+          stage,
+          h("div", { class: "crop-controls" },
+            h("label", { class: "crop-zoom", for: "cropZoom" }, h("span", { class: "label", style: { margin: 0 } }, "Zoom"), zoom),
+            h("div", { class: "file-row" },
+              h("button", { type: "button", class: "btn btn-sm", onclick: function () { center(cover()); } }, "Fill frame"),
+              h("button", { type: "button", class: "btn btn-sm", onclick: function () { center(contain()); } }, "Fit whole image"),
+              h("label", { class: "file-row", style: { gap: "6px" } }, h("span", { class: "muted", style: { "font-size": "12.5px" } }, "Background"), bg))),
+          info,
+          h("div", { class: "modal-actions", style: { "margin-top": "16px" } },
+            h("button", { type: "button", class: "btn", onclick: function () { close(null); } }, "Cancel"),
+            h("button", { type: "button", class: "btn btn-primary", onclick: apply }, "Apply crop"))));
+        m.hidden = false;
+        m.onclick = function (e) { if (e.target === m) close(null); };
+        document.addEventListener("keydown", esc);
+        window.addEventListener("resize", measure);
+        requestAnimationFrame(function () { measure(); stage.focus(); });
+      }
+    });
   }
 
   /* ================= Login ================= */
@@ -856,20 +965,44 @@
       var dl = function (id, obj) { return h("datalist", { id: id }, Object.keys(obj).map(function (v) { return h("option", { value: v }); })); };
 
       // Cover
-      var coverBox = h("div", { class: "cover-box", tabindex: "0", role: "button", "aria-label": "Upload cover image" });
+      var coverBox = h("div", { class: "cover-box", tabindex: "0", role: "button", "aria-label": "Cover image: click to upload or adjust" });
       var drawCover = function () {
         coverBox.innerHTML = "";
         if (p.cover) coverBox.appendChild(h("img", { src: src(p.cover), alt: "Cover" }));
-        else coverBox.appendChild(h("span", { text: "Upload cover (1140 × 1170)" }));
+        else coverBox.appendChild(h("span", { text: "Upload cover (1440 × 1170)" }));
+      };
+      var coverOriginal = null; // the full image picked this session, so re-cropping never loses quality
+      var applyCover = function (blob) {
+        var path = "assets/uploads/" + slugify(p.slug + "-cover").slice(0, 40) + "-" + uid().slice(-5) + ".jpg";
+        S.pending[path] = { blob: blob, url: URL.createObjectURL(blob) };
+        markDirty("uploads");
+        p.cover = "/" + path; dirty(); drawCover(); drawCoverButtons();
       };
       var pickCover = function () {
         pickFiles("image/*").then(function (files) {
           if (!files.length) return;
-          upload(files[0], PRESET.cover, p.slug + "-cover").then(function (path) { p.cover = path; dirty(); drawCover(); }, function (e) { toast(e.message, true); });
+          if (!/^image\/(jpeg|png|webp|bmp|gif)$/.test(files[0].type)) { toast("Choose a JPG, PNG or WebP image for the cover.", true); return; }
+          coverOriginal = URL.createObjectURL(files[0]);
+          cropper(coverOriginal, PRESET.cover.w, PRESET.cover.h, "Adjust cover").then(function (blob) { if (blob) applyCover(blob); });
         });
       };
-      coverBox.addEventListener("click", pickCover);
-      coverBox.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pickCover(); } });
+      var adjustCover = function () {
+        var source = coverOriginal || src(p.cover);
+        cropper(source, PRESET.cover.w, PRESET.cover.h, "Adjust cover").then(function (blob) { if (blob) applyCover(blob); },
+          function () { toast("This cover can't be re-cropped here. Click Change cover and pick the image again.", true); });
+      };
+      var coverBtns = h("div", { class: "file-row", style: { "margin-top": "8px" } });
+      var drawCoverButtons = function () {
+        coverBtns.innerHTML = "";
+        add(coverBtns, [
+          h("button", { type: "button", class: "btn btn-sm", onclick: pickCover }, p.cover ? "Change cover" : "Upload cover"),
+          p.cover ? h("button", { type: "button", class: "btn btn-sm", onclick: adjustCover }, "Adjust crop") : null,
+          h("span", { class: "hint", text: "1440 × 1170 px. You can drag, zoom or fit the image after choosing it." })
+        ]);
+      };
+      drawCoverButtons();
+      coverBox.addEventListener("click", function () { if (p.cover) adjustCover(); else pickCover(); });
+      coverBox.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); if (p.cover) adjustCover(); else pickCover(); } });
       drawCover();
 
       var slugTouched = !/^untitled-/.test(p.slug || "");
@@ -889,10 +1022,7 @@
 
       add(side, [
         h("h2", { text: "Project settings" }),
-        h("div", { class: "field" }, h("span", { class: "label" }, "Cover image"), coverBox,
-          h("div", { class: "file-row", style: { "margin-top": "8px" } },
-            h("button", { type: "button", class: "btn btn-sm", onclick: pickCover }, p.cover ? "Change cover" : "Upload cover"),
-            h("span", { class: "hint", text: "Cropped to 1140 × 1170 px automatically (same as your cards)." }))),
+        h("div", { class: "field" }, h("span", { class: "label" }, "Cover image"), coverBox, coverBtns),
         f("Title", "title"),
         h("label", { class: "field" }, h("span", { class: "label" }, "URL name"), slugEl, slugHint),
         f("Short summary", "summary", { multiline: true, rows: 3, hint: "Shown on hover and at the top of the project." }),
@@ -1124,7 +1254,7 @@
       h("div", { class: "card stack", style: { "margin-top": "16px" } }, h("h2", { text: "Tips" }),
         h("ul", { class: "steps", style: { margin: 0 } },
           h("li", { text: "Save often with Ctrl/Cmd + S. Nothing reaches your site until you save." }),
-          h("li", { text: "Images are resized for the web automatically (covers to 1140 × 1170, content images to 2400 px wide)." }),
+          h("li", { text: "Images are resized for the web automatically (covers to 1440 × 1170, content images to 2400 px wide)." }),
           h("li", { text: "Set a project to Draft to keep working on it without it showing on your site." }),
           h("li", { text: "Use Preview to see unsaved changes exactly as visitors will." })))));
   }

@@ -68,7 +68,7 @@ The admin page itself is public but useless without your token.
 
 ### Adding a project
 1. **Projects → New project.**
-2. Right panel: upload a **cover** (auto-cropped to 1140 × 1170 px), fill in title, summary, category
+2. Right panel: upload a **cover** (auto-cropped to 1440 × 1170 px), fill in title, summary, category
    (becomes a filter chip), client, role, year, tools, tags.
 3. Build the canvas like Behance: **Image**, **Text**, **Photo grid**, **Video / embed**
    (YouTube, Vimeo, Loom, Figma links, or upload an MP4), **Spacer**. Drag images straight onto the
@@ -77,7 +77,7 @@ The admin page itself is public but useless without your token.
 5. Keep it as **Draft** while you work; switch to **Published** when ready. **Preview** shows unsaved changes.
 6. **Save.** Drag project cards on the Projects screen to change their order.
 
-Images are resized for the web automatically (covers 1140 × 1170, content images up to 2400 px wide).
+Images are resized for the web automatically (covers 1440 × 1170, content images up to 2400 px wide).
 
 ### Editing your resume
 **Resume** in the admin: header, summary, expertise groups, experience (one achievement per line),
