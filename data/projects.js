@@ -1,6 +1,68 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "emailer",
+    "title": "Emailer",
+    "status": "draft",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2018",
+    "date": "2026-10-30",
+    "role": "",
+    "tools": [
+      "Photoshop"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-sqc8c-cover-kwt7k.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "text",
+        "text": "## Email Campaign Design\n\nA collection of promotional and brand email designs focused on clear messaging, strong visual hierarchy, and compelling calls to action."
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/emailer-1-butme.png",
+        "caption": "",
+        "width": "contained"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/emailer-2-hvi2d.jpg",
+        "caption": "",
+        "width": "contained"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/emailer-3-1i50p.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/emailer-4-zk03r.jpg",
+        "caption": "",
+        "width": "contained"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/emailer-5-15zho.jpg",
+        "caption": "",
+        "width": "contained"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/emailer-6-kc3j0.jpg",
+        "caption": "",
+        "width": "contained"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "centauri-ai-healthcare",
     "title": "Centauri — AI Healthcare Platform",
     "status": "published",
