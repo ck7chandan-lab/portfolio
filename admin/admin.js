@@ -259,7 +259,7 @@
       });
     });
   }
-  var PRESET = { cover: { w: 1600, h: 1200, crop: true }, avatar: { w: 640, h: 640, crop: true }, content: { max: 2400 }, none: null };
+  var PRESET = { cover: { w: 1140, h: 1170, crop: true }, avatar: { w: 640, h: 640, crop: true }, content: { max: 2400 }, none: null };
   function upload(file, preset, prefix) {
     if (file.size > 40e6) return Promise.reject(new Error(file.name + " is larger than 40 MB. Compress it first."));
     var p = preset ? processImage(file, preset) : Promise.resolve({ blob: file, ext: (file.name.split(".").pop() || "bin").toLowerCase() });
@@ -860,7 +860,7 @@
       var drawCover = function () {
         coverBox.innerHTML = "";
         if (p.cover) coverBox.appendChild(h("img", { src: src(p.cover), alt: "Cover" }));
-        else coverBox.appendChild(h("span", { text: "Upload cover (4:3)" }));
+        else coverBox.appendChild(h("span", { text: "Upload cover (1140 × 1170)" }));
       };
       var pickCover = function () {
         pickFiles("image/*").then(function (files) {
@@ -892,7 +892,7 @@
         h("div", { class: "field" }, h("span", { class: "label" }, "Cover image"), coverBox,
           h("div", { class: "file-row", style: { "margin-top": "8px" } },
             h("button", { type: "button", class: "btn btn-sm", onclick: pickCover }, p.cover ? "Change cover" : "Upload cover"),
-            h("span", { class: "hint", text: "Cropped to 1600 × 1200 automatically." }))),
+            h("span", { class: "hint", text: "Cropped to 1140 × 1170 px automatically (same as your cards)." }))),
         f("Title", "title"),
         h("label", { class: "field" }, h("span", { class: "label" }, "URL name"), slugEl, slugHint),
         f("Short summary", "summary", { multiline: true, rows: 3, hint: "Shown on hover and at the top of the project." }),
@@ -1124,7 +1124,7 @@
       h("div", { class: "card stack", style: { "margin-top": "16px" } }, h("h2", { text: "Tips" }),
         h("ul", { class: "steps", style: { margin: 0 } },
           h("li", { text: "Save often with Ctrl/Cmd + S. Nothing reaches your site until you save." }),
-          h("li", { text: "Images are resized for the web automatically (covers to 1600 × 1200, content images to 2400 px wide)." }),
+          h("li", { text: "Images are resized for the web automatically (covers to 1140 × 1170, content images to 2400 px wide)." }),
           h("li", { text: "Set a project to Draft to keep working on it without it showing on your site." }),
           h("li", { text: "Use Preview to see unsaved changes exactly as visitors will." })))));
   }
