@@ -3,8 +3,8 @@ window.CK_DATA["data/projects.json"] = [
   {
     "slug": "emailer",
     "title": "Emailer",
-    "status": "draft",
-    "featured": false,
+    "status": "published",
+    "featured": true,
     "client": "",
     "category": "",
     "domain": "",
