@@ -221,9 +221,11 @@
       case "grid":
         var imgs = (m.images || []).filter(function (g) { return g && g.image; });
         if (!imgs.length) return "";
-        var cols = Math.min(Math.max(parseInt(m.columns, 10) || Math.min(imgs.length, 3), 1), 4);
-        return '<div class="mod mod-grid" style="--cols:' + cols + '">' + imgs.map(function (g) {
-          return '<figure><img loading="lazy" src="' + esc(asset(g.image)) + '" alt="' + esc(g.caption || p.title) + '">' + cap(g.caption) + "</figure>";
+        var gsize = { s: "s", m: "m", l: "l" }[m.size] || "m";
+        var ggap = m.gap == null ? 6 : +m.gap;
+        return '<div class="mod mod-grid jgrid" data-size="' + gsize + '" data-gap="' + ggap + '">' + imgs.map(function (g) {
+          return '<figure class="jg-item"' + (g.w && g.h ? ' data-w="' + (+g.w) + '" data-h="' + (+g.h) + '"' : "") +
+            '><img loading="lazy" src="' + esc(asset(g.image)) + '" alt="' + esc(g.caption || p.title) + '"' + (g.caption ? ' title="' + esc(g.caption) + '"' : "") + "></figure>";
         }).join("") + "</div>";
       case "video":
         var e = embedURL(m.url);
@@ -257,6 +259,7 @@
     if (!hasImage && p.cover) mods = '<figure class="mod mod-image"><img src="' + esc(asset(p.cover)) + '" alt="' + esc(p.title) + '"></figure>' + mods;
     var canvas = $("projCanvas");
     canvas.innerHTML = mods || '<p class="empty">This project has no content yet.</p>';
+    if (window.Justify) canvas.querySelectorAll(".jgrid").forEach(window.Justify.watch);
     canvas.style.setProperty("--canvas-bg", p.bg || "");
     canvas.classList.toggle("has-bg", !!p.bg);
     if (p.bg) canvas.style.setProperty("--canvas-ink", contrastInk(p.bg));

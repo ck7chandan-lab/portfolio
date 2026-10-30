@@ -231,6 +231,13 @@
       img.src = url;
     });
   }
+  function imageSize(url) {
+    return new Promise(function (res, rej) {
+      var i = new Image();
+      i.onload = function () { res({ w: i.naturalWidth, h: i.naturalHeight }); };
+      i.onerror = rej; i.src = url;
+    });
+  }
   // preset: {w,h,crop} fixed crop | {max} longest-edge limit
   function processImage(file, preset) {
     if (!/^image\/(jpeg|png|webp|bmp)$/.test(file.type)) return Promise.resolve({ blob: file, ext: (file.name.split(".").pop() || "bin").toLowerCase() });
@@ -679,7 +686,7 @@
   function newModule(type) {
     if (type === "text") return { type: "text", text: "" };
     if (type === "image") return { type: "image", image: "", caption: "", width: "full" };
-    if (type === "grid") return { type: "grid", images: [], columns: 2 };
+    if (type === "grid") return { type: "grid", images: [], size: "m", gap: 6 };
     if (type === "video") return { type: "video", url: "", caption: "" };
     return { type: "divider" };
   }
@@ -754,9 +761,12 @@
       pickFiles("image/*", true).then(function (files) {
         if (!files.length) return;
         var done = busy("Adding images…");
-        Promise.all(files.map(function (f) { return upload(f, PRESET.content, p.slug); })).then(function (paths) {
-          paths.forEach(function (pa) { m.images.push({ image: pa, caption: "" }); });
-          if (!m.columns || m.images.length < m.columns) m.columns = Math.min(Math.max(m.images.length, 2), 3);
+        Promise.all(files.map(function (f) {
+          return upload(f, PRESET.content, p.slug).then(function (pa) {
+            return imageSize(src(pa)).then(function (d) { return { image: pa, caption: "", w: d.w, h: d.h }; });
+          });
+        })).then(function (items) {
+          items.forEach(function (it) { m.images.push(it); });
           dirty(); drawCanvas();
         }, function (e) { toast(e.message, true); }).then(done);
       });
@@ -900,25 +910,33 @@
           } }, "Replace image")));
     }
     function gridModule(m) {
-      var cols = h("select", { style: { width: "auto" }, "aria-label": "Columns", onchange: function () { m.columns = +cols.value; dirty(); drawCanvas(); } },
-        [2, 3, 4].map(function (n) { return h("option", { value: n, selected: +m.columns === n }, n + " columns"); }));
-      var grid = h("div", { class: "mg", style: { "--cols": m.columns || 2 } });
+      if (!m.size) m.size = "m";
+      if (m.gap == null) m.gap = 6;
+      var sizeSel = h("select", { style: { width: "auto" }, "aria-label": "Row height", onchange: function () { m.size = sizeSel.value; dirty(); window.Justify && (grid.setAttribute("data-size", m.size), Justify.layout(grid)); } },
+        [["s", "Compact rows"], ["m", "Standard rows"], ["l", "Large rows"]].map(function (o) { return h("option", { value: o[0], selected: m.size === o[0] }, o[1]); }));
+      var gapSel = h("select", { style: { width: "auto" }, "aria-label": "Spacing between images", onchange: function () { m.gap = +gapSel.value; dirty(); window.Justify && (grid.setAttribute("data-gap", m.gap), Justify.layout(grid)); } },
+        [[0, "No spacing"], [6, "Small spacing"], [12, "Medium spacing"], [20, "Large spacing"]].map(function (o) { return h("option", { value: o[0], selected: +m.gap === o[0] }, o[1]); }));
+      var grid = h("div", { class: "mg jgrid", "data-size": m.size, "data-gap": m.gap });
       (m.images || []).forEach(function (g, k) {
-        grid.appendChild(h("div", { class: "mg-item", "data-k": k },
+        var item = h("div", { class: "mg-item jg-item", "data-k": k, "data-w": g.w || null, "data-h": g.h || null },
           h("img", { src: src(g.image), alt: g.caption || "" }),
-          iconBtn("close", "Remove image", function () { m.images.splice(k, 1); dirty(); drawCanvas(); })));
+          iconBtn("close", "Remove image", function () { m.images.splice(k, 1); dirty(); drawCanvas(); }));
+        // remember sizes of older images once they load, so the live site lays out instantly
+        if (!g.w) imageSize(src(g.image)).then(function (d) { g.w = d.w; g.h = d.h; }, function () {});
+        grid.appendChild(item);
       });
       if (window.Sortable && m.images.length > 1) {
         window.Sortable.create(grid, { forceFallback: true, fallbackTolerance: 3, onStart: function () { document.body.classList.add("is-dragging"); }, onUnchoose: function () { document.body.classList.remove("is-dragging"); }, animation: 150, onEnd: function (e) {
-          if (e.oldIndex === e.newIndex) return;
+          if (e.oldIndex === e.newIndex) { Justify.layout(grid); return; }
           m.images.splice(e.newIndex, 0, m.images.splice(e.oldIndex, 1)[0]); dirty(); drawCanvas();
         } });
       }
+      if (window.Justify) requestAnimationFrame(function () { Justify.watch(grid); });
       return h("div", null,
         m.images.length ? grid : h("div", { class: "drop", onclick: function () { pickGrid(m); } }, "Click to choose images for the grid"),
-        h("div", { class: "mg-bar" }, cols,
+        h("div", { class: "mg-bar" }, sizeSel, gapSel,
           h("button", { type: "button", class: "btn btn-sm", onclick: function () { pickGrid(m); } }, icon("plus"), "Add images"),
-          m.images.length > 1 ? h("span", { class: "muted", style: { "font-size": "12px" }, text: "Drag images to reorder" }) : null));
+          m.images.length > 1 ? h("span", { class: "muted", style: { "font-size": "12px" }, text: "Images fit into rows automatically. Drag to reorder." }) : null));
     }
     function videoModule(m) {
       var info = h("div");

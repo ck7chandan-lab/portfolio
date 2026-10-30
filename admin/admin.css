@@ -205,8 +205,8 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
 .mi.contained { padding: clamp(16px, 5vw, 64px); }
 .cap { width: 100%; border: 0; background: transparent; text-align: center; color: inherit; opacity: .8; padding: 10px 16px; font: 400 13px/1.4 var(--f-body); }
 .cap:focus { opacity: 1; box-shadow: none; outline: 1px dashed var(--accent); }
-.mg { display: grid; grid-template-columns: repeat(var(--cols, 2), minmax(0, 1fr)); }
-.mg-item { position: relative; }
+.mg.jgrid { display: flex; flex-wrap: wrap; gap: 6px; align-items: flex-start; }
+.mg-item { position: relative; flex: none; width: calc(33.333% - 4px); overflow: hidden; background: var(--sunk); margin: 0; }
 .mg-item img { width: 100%; height: 100%; object-fit: cover; aspect-ratio: auto; }
 .mg-item .icon-btn { position: absolute; top: 6px; right: 6px; background: var(--panel); border-color: var(--line); }
 .mg-bar { display: flex; gap: 8px; align-items: center; padding: 10px 12px; flex-wrap: wrap; justify-content: center; }
@@ -325,6 +325,5 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
   .page, .ed-main { padding-left: var(--gl); padding-right: var(--gr); }
   .login-grid { grid-template-columns: minmax(0, 1fr); }
   .mb-tools, .mb-type, .insert button { opacity: 1; }
-  .mg { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
