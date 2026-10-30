@@ -278,6 +278,108 @@
     return l > 0.6 ? "#111A30" : "#F3F4F8";
   }
 
+
+  /* ---------- Image viewer (Behance-style lightbox) ----------
+     Click 1: image fits inside the screen (never enlarged past its real size), centred.
+     Click 2 (only if the image is bigger than the screen): real size, centred across, from the top.
+     Esc / ✕ / click on the dark area closes it. ← → or the arrows move between images.        */
+  var LB = { el: null, img: null, list: [], i: 0, actual: false, lastFocus: null };
+  function lbBuild() {
+    if (LB.el) return;
+    var el = document.createElement("div");
+    el.className = "lb"; el.hidden = true;
+    el.setAttribute("role", "dialog"); el.setAttribute("aria-modal", "true"); el.setAttribute("aria-label", "Image viewer");
+    el.innerHTML =
+      '<div class="lb-scroll"><div class="lb-stage"><img class="lb-img" alt=""></div></div>' +
+      '<button type="button" class="lb-btn lb-close" aria-label="Close">' +
+        '<svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="currentColor" d="M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z"/></svg></button>' +
+      '<button type="button" class="lb-btn lb-prev" aria-label="Previous image">' +
+        '<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="M15.4 5.4 14 4l-8 8 8 8 1.4-1.4L8.8 12z"/></svg></button>' +
+      '<button type="button" class="lb-btn lb-next" aria-label="Next image">' +
+        '<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true"><path fill="currentColor" d="m8.6 18.6 1.4 1.4 8-8-8-8-1.4 1.4 6.6 6.6z"/></svg></button>' +
+      '<div class="lb-count" aria-live="polite"></div>';
+    document.body.appendChild(el);
+    LB.el = el; LB.img = el.querySelector(".lb-img"); LB.scroll = el.querySelector(".lb-scroll");
+    LB.img.addEventListener("click", function (e) { e.stopPropagation(); lbToggle(); });
+    LB.img.addEventListener("load", lbFit);
+    el.querySelector(".lb-close").addEventListener("click", lbClose);
+    el.querySelector(".lb-prev").addEventListener("click", function (e) { e.stopPropagation(); lbGo(-1); });
+    el.querySelector(".lb-next").addEventListener("click", function (e) { e.stopPropagation(); lbGo(1); });
+    LB.scroll.addEventListener("click", function (e) { if (e.target !== LB.img) lbClose(); });
+    document.addEventListener("keydown", function (e) {
+      if (LB.el.hidden) return;
+      if (e.key === "Escape") lbClose();
+      else if (e.key === "ArrowRight") lbGo(1);
+      else if (e.key === "ArrowLeft") lbGo(-1);
+    });
+    window.addEventListener("resize", function () { if (!LB.el.hidden) lbFit(); });
+  }
+  // Is the image bigger than the screen in either direction?
+  function lbBig() {
+    var img = LB.img, s = LB.scroll;
+    return img.naturalWidth > s.clientWidth || img.naturalHeight > s.clientHeight;
+  }
+  function lbFit() {
+    var img = LB.img;
+    if (!img.naturalWidth) return;
+    var big = lbBig();
+    LB.el.classList.toggle("is-actual", LB.actual && big);
+    LB.el.classList.toggle("can-zoom", big);
+    if (LB.actual && big) {
+      img.style.width = img.naturalWidth + "px"; img.style.height = img.naturalHeight + "px";
+    } else {
+      // fit: never larger than the real size, never larger than the screen
+      var vw = LB.scroll.clientWidth, vh = LB.scroll.clientHeight;
+      var k = Math.min(1, vw / img.naturalWidth, vh / img.naturalHeight);
+      img.style.width = Math.floor(img.naturalWidth * k) + "px"; img.style.height = Math.floor(img.naturalHeight * k) + "px";
+    }
+  }
+  function lbShow(i) {
+    LB.i = (i + LB.list.length) % LB.list.length;
+    LB.actual = false;
+    var it = LB.list[LB.i];
+    LB.el.classList.remove("is-actual", "can-zoom");
+    LB.img.style.width = ""; LB.img.style.height = "";
+    LB.img.src = it.src; LB.img.alt = it.alt || "";
+    LB.scroll.scrollTop = 0; LB.scroll.scrollLeft = 0;
+    var multi = LB.list.length > 1;
+    LB.el.querySelector(".lb-prev").hidden = !multi;
+    LB.el.querySelector(".lb-next").hidden = !multi;
+    LB.el.querySelector(".lb-count").textContent = multi ? (LB.i + 1) + " / " + LB.list.length : "";
+    if (LB.img.complete) lbFit();
+  }
+  function lbToggle() {
+    if (!lbBig()) return;
+    LB.actual = !LB.actual;
+    lbFit();
+    LB.scroll.scrollTop = 0;
+    LB.scroll.scrollLeft = Math.max(0, (LB.scroll.scrollWidth - LB.scroll.clientWidth) / 2);
+  }
+  function lbGo(d) { if (LB.list.length > 1) lbShow(LB.i + d); }
+  function lbOpen(list, i) {
+    lbBuild();
+    LB.list = list; LB.lastFocus = document.activeElement;
+    LB.el.hidden = false;
+    document.documentElement.classList.add("lb-open");
+    lbShow(i);
+    LB.el.querySelector(".lb-close").focus({ preventScroll: true });
+  }
+  function lbClose() {
+    if (!LB.el || LB.el.hidden) return;
+    LB.el.hidden = true;
+    document.documentElement.classList.remove("lb-open");
+    LB.img.removeAttribute("src");
+    if (LB.lastFocus && LB.lastFocus.focus) LB.lastFocus.focus({ preventScroll: true });
+  }
+  function lbBind(canvas) {
+    canvas.addEventListener("click", function (e) {
+      var img = e.target.closest(".mod-image img, .jg-item img");
+      if (!img) return;
+      var all = Array.prototype.slice.call(canvas.querySelectorAll(".mod-image img, .jg-item img"));
+      lbOpen(all.map(function (x) { return { src: x.currentSrc || x.src, alt: x.alt }; }), all.indexOf(img));
+    });
+  }
+
   /* ---------- Router: #work #about #experience #resume #contact #p-<slug> ---------- */
   function route() {
     var h = decodeURIComponent((location.hash || "").slice(1));
@@ -336,7 +438,8 @@
         else fallback();
       } catch (e) { fallback(); }
     });
-    window.addEventListener("hashchange", route);
+    lbBind($("projCanvas"));
+    window.addEventListener("hashchange", function () { lbClose(); route(); });
   }
 
   function load(path) {
