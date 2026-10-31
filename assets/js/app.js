@@ -63,7 +63,12 @@
     $("pRole").textContent = s.role;
     $("pLoc").textContent = s.location || "";
     $("pAvail").textContent = s.availability || "";
-    $("pAvail").hidden = !s.availability;
+    $("pAvail").parentNode.hidden = !s.availability;
+    $("pRole").parentNode.hidden = !s.role;
+    $("pLoc").parentNode.hidden = !s.location;
+    var ban = $("banner");
+    if (s.banner) { ban.style.backgroundImage = 'url("' + asset(s.banner).replace(/"/g, "%22") + '")'; ban.classList.add("has-img"); }
+    else { ban.style.backgroundImage = ""; ban.classList.remove("has-img"); }
 
     var av = $("avatar");
     if (s.photo) av.innerHTML = '<img src="' + esc(asset(s.photo)) + '" alt="' + esc(s.name) + '">';

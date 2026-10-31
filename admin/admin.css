@@ -274,6 +274,14 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
 .avatar-edit .av { width: 96px; height: 96px; border-radius: 50%; overflow: hidden; background: var(--sunk); border: 1px solid var(--line); display: grid; place-items: center; font: 800 28px/1 var(--f-display); color: var(--ink-2); flex: none; }
 .avatar-edit .av img { width: 100%; height: 100%; object-fit: cover; }
 
+/* Banner editor */
+.banner-edit {
+  height: 120px; border-radius: 10px; background: var(--sunk) center / cover no-repeat; border: 1px solid var(--line);
+  display: grid; place-items: center; text-align: center; padding: 12px; color: var(--ink-2); cursor: pointer; font-size: 13px;
+}
+.banner-edit.is-empty { border-style: dashed; background-image: linear-gradient(115deg, #E6F4F1, #BFE1DA); color: #0B5F58; }
+.banner-edit + .file-row { margin-top: 8px; }
+
 /* Cover cropper */
 .modal-box.crop-box { max-width: 760px; }
 .crop-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }

@@ -3,6 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFFFFF">
 <title>Chandan Kumar Portfolio</title>
 <meta name="description" content="Chandan Kumar — Principal UI/UX & Product Designer. Case studies in healthcare, enterprise SaaS, fintech, D2C and e-commerce.">
 <meta property="og:title" content="Chandan Kumar — Principal UI/UX & Product Designer">
@@ -11,7 +12,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@500;700;800&family=Instrument+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -40,22 +41,24 @@
 <main id="app">
   <!-- PROFILE VIEW -->
   <section id="profileView">
-    <div class="banner" aria-hidden="true"><div class="banner-grid"></div></div>
+    <div class="banner" id="banner" aria-hidden="true"></div>
     <div class="shell">
       <aside class="profile-card" aria-label="Profile">
         <div class="avatar" id="avatar"><span id="avatarInitials">CK</span></div>
         <h1 class="p-name" id="pName">Chandan Kumar</h1>
-        <p class="p-role" id="pRole"></p>
-        <p class="p-loc"><svg viewBox="0 0 24 24" width="14" height="14" aria-hidden="true"><path fill="currentColor" d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg><span id="pLoc"></span></p>
-        <p class="avail" id="pAvail"></p>
+        <ul class="p-info">
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 4h6a2 2 0 0 1 2 2v1h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V6a2 2 0 0 1 2-2zm0 3h6V6H9zM5 9v3h14V9zm0 5v4h14v-4h-6v1h-2v-1z"/></svg><span id="pAvail"></span></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 7v6h-2v-6zm0-4v2h-2V7z"/></svg><span id="pRole"></span></li>
+          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm6.9 9a7 7 0 0 0-3.3-5.4c.6 1.5 1 3.4 1.1 5.4zm-4.2 0c-.2-2.9-1.2-5-1.7-5.8-.5.8-1.5 2.9-1.7 5.8zm-5.4 0c.1-2 .5-3.9 1.1-5.4A7 7 0 0 0 5.1 11zm-4.2 2a7 7 0 0 0 3.3 5.4c-.6-1.5-1-3.4-1.1-5.4zm6.2 0c.2 2.9 1.2 5 1.7 5.8.5-.8 1.5-2.9 1.7-5.8zm3.3 5.4a7 7 0 0 0 3.3-5.4h-2.2c-.1 2-.5 3.9-1.1 5.4z"/></svg><span id="pLoc"></span></li>
+        </ul>
         <div class="p-actions">
           <a class="btn btn-primary" href="#contact">Contact</a>
-          <a class="btn btn-ghost" href="#resume">Resume</a>
-          <a class="btn btn-ghost" id="liBtn" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a>
+          <a class="btn btn-soft" href="#resume">Resume</a>
+          <a class="btn btn-soft" id="liBtn" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a>
         </div>
         <dl class="stats">
           <div><dt>Projects</dt><dd id="statProjects">0</dd></div>
-          <div><dt>Experience</dt><dd>9+ yrs</dd></div>
+          <div><dt>Experience</dt><dd>9+ years</dd></div>
           <div><dt>Domains</dt><dd id="statDomains">0</dd></div>
         </dl>
         <div class="p-block">
@@ -81,7 +84,10 @@
         </div>
 
         <div class="panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
-          <div class="filters" id="filters" aria-label="Filter projects"></div>
+          <div class="work-head">
+            <h2 class="section-title">Projects</h2>
+            <div class="filters" id="filters" aria-label="Filter projects"></div>
+          </div>
           <div class="grid" id="grid"></div>
           <p class="empty" id="gridEmpty" hidden>No projects in this category yet.</p>
         </div>
@@ -109,7 +115,7 @@
                 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 16 7 11l1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11zM5 20v-2h14v2z"/></svg>
                 Download PDF
               </button>
-              <button class="btn btn-ghost" type="button" id="dlDocx">
+              <button class="btn btn-soft" type="button" id="dlDocx">
                 <svg viewBox="0 0 24 24" width="16" height="16" aria-hidden="true"><path fill="currentColor" d="M12 16 7 11l1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11zM5 20v-2h14v2z"/></svg>
                 Download Word
               </button>
@@ -124,7 +130,7 @@
           <p>I'm open to full-time principal, lead and senior product design roles. The quickest way to reach me is email.</p>
           <div class="email-row">
             <span class="email" id="emailText"></span>
-            <button class="btn btn-ghost btn-sm" type="button" id="copyBtn">Copy email</button>
+            <button class="btn btn-soft btn-sm" type="button" id="copyBtn">Copy email</button>
             <a class="btn btn-primary btn-sm" id="mailBtn" href="#">Write to me</a>
           </div>
           <p class="copied" id="copied" role="status"></p>
@@ -175,7 +181,7 @@
 <footer class="site-foot">
   <div class="site-foot-in">
     <span>© <span id="year"></span> <span id="footName">Chandan Kumar</span></span>
-    <span class="mono">Designed &amp; built by hand</span>
+    <span>Designed &amp; built by hand</span>
   </div>
 </footer>
 <!--BODY-END-->

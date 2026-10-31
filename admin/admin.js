@@ -382,6 +382,7 @@
         var iw = img.naturalWidth, ih = img.naturalHeight;
         var m = document.getElementById("modal");
         var stage = h("div", { class: "crop-stage", tabindex: "0", "aria-label": "Crop area. Drag or use arrow keys to move the image." });
+        stage.style.aspectRatio = outW + " / " + outH;
         var pic = h("img", { src: srcUrl, alt: "", draggable: "false" });
         if (img.crossOrigin) pic.crossOrigin = "anonymous";
         stage.appendChild(pic);
@@ -1114,9 +1115,46 @@
       else av.textContent = (s.name || "").split(/\s+/).map(function (w) { return w[0]; }).join("").slice(0, 2).toUpperCase();
     };
     drawAv();
+    // Banner (top of the profile page), cropped to 3200 × 480
+    var bannerBox = h("div", { class: "banner-edit", role: "button", tabindex: "0", "aria-label": "Banner image: click to upload or adjust" });
+    var bannerOriginal = null;
+    var drawBanner = function () {
+      bannerBox.innerHTML = "";
+      bannerBox.style.backgroundImage = s.banner ? 'url("' + src(s.banner) + '")' : "";
+      bannerBox.classList.toggle("is-empty", !s.banner);
+      if (!s.banner) bannerBox.appendChild(h("span", { text: "Upload banner (3200 × 480). Without one, a soft teal banner is used." }));
+      bannerBtns.innerHTML = "";
+      add(bannerBtns, [
+        h("button", { type: "button", class: "btn btn-sm", onclick: pickBanner }, s.banner ? "Change banner" : "Upload banner"),
+        s.banner ? h("button", { type: "button", class: "btn btn-sm", onclick: adjustBanner }, "Adjust crop") : null,
+        s.banner ? h("button", { type: "button", class: "btn btn-sm btn-danger", onclick: function () { s.banner = ""; bannerOriginal = null; dirty(); drawBanner(); } }, "Remove") : null
+      ]);
+    };
+    var applyBanner = function (blob) {
+      var path = "assets/uploads/banner-" + uid().slice(-6) + ".jpg";
+      S.pending[path] = { blob: blob, url: URL.createObjectURL(blob) };
+      markDirty("uploads");
+      s.banner = "/" + path; dirty(); drawBanner();
+    };
+    var pickBanner = function () {
+      pickFiles("image/*").then(function (f) {
+        if (!f.length) return;
+        bannerOriginal = URL.createObjectURL(f[0]);
+        cropper(bannerOriginal, 3200, 480, "Adjust banner").then(function (b) { if (b) applyBanner(b); });
+      });
+    };
+    var adjustBanner = function () {
+      cropper(bannerOriginal || src(s.banner), 3200, 480, "Adjust banner").then(function (b) { if (b) applyBanner(b); },
+        function () { toast("This banner can't be re-cropped here. Click Change banner and pick the image again.", true); });
+    };
+    var bannerBtns = h("div", { class: "file-row" });
+    bannerBox.addEventListener("click", function () { if (s.banner) adjustBanner(); else pickBanner(); });
+    bannerBox.addEventListener("keydown", function (e) { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); if (s.banner) adjustBanner(); else pickBanner(); } });
+    drawBanner();
     var page = h("div", { class: "page page-narrow" },
       h("details", { class: "section", open: true }, h("summary", null, "Basics"),
         h("div", { class: "section-body" },
+          h("div", { class: "field" }, h("span", { class: "label" }, "Banner"), bannerBox, bannerBtns),
           h("div", { class: "avatar-edit" }, av, h("div", { class: "file-row" },
             h("button", { type: "button", class: "btn", onclick: function () {
               pickFiles("image/*").then(function (f) {
