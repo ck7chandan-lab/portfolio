@@ -335,3 +335,10 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
   .mb-tools, .mb-type, .insert button { opacity: 1; }
 }
 @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+
+/* Certificate / link thumbnails */
+.thumb-edit { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+.thumb-edit > img { width: 160px; height: 110px; object-fit: contain; border-radius: 8px; border: 1px solid var(--line); background: var(--panel); }
+.thumb-edit > span { width: 160px; height: 110px; display: grid; place-items: center; border: 1px dashed var(--line); border-radius: 8px; font-size: 13px; }
+.note-box { padding: 14px 18px; }
+.note-box a { color: var(--accent, #4F46E5); font-weight: 600; }

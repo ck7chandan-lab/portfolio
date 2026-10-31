@@ -12,7 +12,7 @@
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap">
 <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -28,6 +28,8 @@
       <a href="#about" data-tab-link="about">About</a>
       <a href="#experience" data-tab-link="experience">Experience</a>
       <a href="#resume" data-tab-link="resume">Resume</a>
+      <a href="#certifications" data-tab-link="certifications">Certifications</a>
+      <a href="#links" data-tab-link="links">Project Links</a>
     </nav>
     <div class="topbar-actions">
       <button class="icon-btn" id="themeBtn" type="button" aria-label="Switch colour theme">
@@ -47,7 +49,7 @@
         <div class="avatar" id="avatar"><span id="avatarInitials">CK</span></div>
         <h1 class="p-name" id="pName">Chandan Kumar</h1>
         <ul class="p-info">
-          <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M9 4h6a2 2 0 0 1 2 2v1h3a1 1 0 0 1 1 1v11a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h3V6a2 2 0 0 1 2-2zm0 3h6V6H9zM5 9v3h14V9zm0 5v4h14v-4h-6v1h-2v-1z"/></svg><span id="pAvail"></span></li>
+          <li class="p-avail"><span class="dot" aria-hidden="true"></span><span id="pAvail"></span></li>
           <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm1 7v6h-2v-6zm0-4v2h-2V7z"/></svg><span id="pRole"></span></li>
           <li><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path fill="currentColor" d="M12 2a10 10 0 1 1 0 20 10 10 0 0 1 0-20zm6.9 9a7 7 0 0 0-3.3-5.4c.6 1.5 1 3.4 1.1 5.4zm-4.2 0c-.2-2.9-1.2-5-1.7-5.8-.5.8-1.5 2.9-1.7 5.8zm-5.4 0c.1-2 .5-3.9 1.1-5.4A7 7 0 0 0 5.1 11zm-4.2 2a7 7 0 0 0 3.3 5.4c-.6-1.5-1-3.4-1.1-5.4zm6.2 0c.2 2.9 1.2 5 1.7 5.8.5-.8 1.5-2.9 1.7-5.8zm3.3 5.4a7 7 0 0 0 3.3-5.4h-2.2c-.1 2-.5 3.9-1.1 5.4z"/></svg><span id="pLoc"></span></li>
         </ul>
@@ -57,9 +59,9 @@
           <a class="btn btn-soft" id="liBtn" href="#" target="_blank" rel="noopener" hidden>LinkedIn</a>
         </div>
         <dl class="stats">
-          <div><dt>Projects</dt><dd id="statProjects">0</dd></div>
-          <div><dt>Experience</dt><dd>9+ years</dd></div>
-          <div><dt>Domains</dt><dd id="statDomains">0</dd></div>
+          <div><dd>9+</dd><dt>Years</dt></div>
+          <div><dd id="statProjects">0</dd><dt>Projects</dt></div>
+          <div><dd id="statDomains">0</dd><dt>Domains</dt></div>
         </dl>
         <div class="p-block">
           <h2 class="label">Skills</h2>
@@ -70,7 +72,7 @@
           <ul class="chips chips-quiet" id="pTools"></ul>
         </div>
         <div class="p-block">
-          <h2 class="label">Certifications</h2>
+          <h2 class="label">Certifications <a class="see-all" href="#certifications">See all</a></h2>
           <ul class="certs" id="pCerts"></ul>
         </div>
       </aside>
@@ -81,6 +83,8 @@
           <button role="tab" id="tab-about" data-tab="about" aria-selected="false">About</button>
           <button role="tab" id="tab-experience" data-tab="experience" aria-selected="false">Experience</button>
           <button role="tab" id="tab-resume" data-tab="resume" aria-selected="false">Resume</button>
+          <button role="tab" id="tab-certifications" data-tab="certifications" aria-selected="false">Certifications</button>
+          <button role="tab" id="tab-links" data-tab="links" aria-selected="false">Project Links</button>
         </div>
 
         <div class="panel" id="panel-work" role="tabpanel" aria-labelledby="tab-work">
@@ -123,6 +127,24 @@
           </div>
           <p class="dl-status" id="dlStatus" role="status"></p>
           <article class="resume-sheet" id="resumeSheet" aria-label="Resume"></article>
+        </div>
+
+        <div class="panel" id="panel-certifications" role="tabpanel" aria-labelledby="tab-certifications" hidden>
+          <div class="panel-head">
+            <h2 class="section-title">Certifications</h2>
+            <p class="panel-note">Click a certificate to see it full size.</p>
+          </div>
+          <div class="cert-grid" id="certGrid"></div>
+          <p class="empty" id="certEmpty" hidden>No certifications added yet.</p>
+        </div>
+
+        <div class="panel" id="panel-links" role="tabpanel" aria-labelledby="tab-links" hidden>
+          <div class="panel-head">
+            <h2 class="section-title">Project Links</h2>
+            <p class="panel-note">Live products, websites and prototypes I designed.</p>
+          </div>
+          <div class="link-grid" id="linkGrid"></div>
+          <p class="empty" id="linkEmpty" hidden>No live links added yet.</p>
         </div>
 
         <section class="contact" id="contact" aria-labelledby="contactTitle">

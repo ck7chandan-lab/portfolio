@@ -86,7 +86,7 @@
     var list = state.projects.filter(visible);
     $("statProjects").textContent = list.length;
     var domains = {};
-    list.forEach(function (p) { if (p.domain) domains[p.domain] = 1; });
+    list.forEach(function (p) { if (dom(p)) domains[dom(p)] = 1; });
     $("statDomains").textContent = Object.keys(domains).length;
 
     $("aboutHeadline").textContent = s.headline || "";
@@ -165,6 +165,8 @@
   }
 
   /* ---------- Work grid ---------- */
+  // The one-word "Domain" set in the admin drives the filter buttons (older projects fall back to Category).
+  function dom(p) { return String(p.domain || p.category || "").trim(); }
   function cardHTML(p) {
     return '<a class="card" href="#p-' + esc(p.slug) + '">' +
       '<div class="card-cover">' +
@@ -172,14 +174,13 @@
         (p.status === "draft" ? '<span class="badge badge-draft">Draft</span>' : p.featured ? '<span class="badge">Featured</span>' : "") +
         '<div class="card-over"><strong>' + esc(p.title) + "</strong><span>" + esc(p.summary || "") + "</span></div>" +
       "</div>" +
-      '<p class="card-title">' + esc(p.title) + "</p>" +
-      '<div class="card-meta"><p class="card-sub">' + esc(p.client || "") + '</p><span class="card-cat">' + esc(p.category || "") + "</span></div>" +
+      '<div class="card-info"><p class="card-title">' + esc(p.title) + "</p>" + (dom(p) ? '<span class="card-cat">' + esc(dom(p)) + "</span>" : "") + "</div>" +
     "</a>";
   }
   function renderFilters() {
     var list = state.projects.filter(visible);
     var counts = { All: list.length };
-    list.forEach(function (p) { if (p.category) counts[p.category] = (counts[p.category] || 0) + 1; });
+    list.forEach(function (p) { var d = dom(p); if (d) counts[d] = (counts[d] || 0) + 1; });
     if (!counts[state.filter]) state.filter = "All";
     $("filters").innerHTML = Object.keys(counts).map(function (c) {
       return '<button type="button" data-filter="' + esc(c) + '" aria-pressed="' + (c === state.filter) + '">' +
@@ -187,13 +188,54 @@
     }).join("");
   }
   function renderGrid() {
-    var list = state.projects.filter(visible).filter(function (p) { return state.filter === "All" || p.category === state.filter; });
+    var list = state.projects.filter(visible).filter(function (p) { return state.filter === "All" || dom(p) === state.filter; });
     $("grid").innerHTML = list.map(cardHTML).join("");
     $("gridEmpty").hidden = list.length > 0;
   }
 
+  /* ---------- Certifications ---------- */
+  function renderCerts() {
+    var list = ((state.resume || {}).certifications || []).filter(function (c) { return c && c.name; });
+    $("certGrid").innerHTML = list.map(function (c, i) {
+      var pic = c.image
+        ? '<button type="button" class="cert-img" data-cert="' + i + '" aria-label="View ' + esc(c.name) + ' certificate full size"><img loading="lazy" src="' + esc(asset(c.image)) + '" alt=""></button>'
+        : '<div class="cert-img cert-ph" aria-hidden="true"><svg viewBox="0 0 24 24" width="40" height="40"><path fill="currentColor" d="M12 2a7 7 0 0 1 4.6 12.3L18 22l-6-3-6 3 1.4-7.7A7 7 0 0 1 12 2zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z"/></svg></div>';
+      return '<article class="cert-card">' + pic +
+        '<div class="cert-body"><h3>' + esc(c.name) + "</h3>" +
+        '<p class="cert-by">' + esc(c.issuer || "") + (c.detail ? ' <span class="cert-detail">' + esc(c.detail) + "</span>" : "") + "</p>" +
+        (c.url ? '<a class="cert-link" href="' + esc(c.url) + '" target="_blank" rel="noopener">View credential <span aria-hidden="true">↗</span></a>' : "") +
+        "</div></article>";
+    }).join("");
+    $("certEmpty").hidden = list.length > 0;
+    state.certImgs = list.map(function (c) { return c.image ? { src: asset(c.image), alt: c.name } : null; });
+  }
+
+  /* ---------- Project links ---------- */
+  function host(u) { try { return new URL(u).hostname.replace(/^www\./, ""); } catch (e) { return u; } }
+  function renderLinks() {
+    var manual = ((state.site || {}).links || []).filter(function (l) { return l && l.url; });
+    var fromProjects = state.projects.filter(visible).filter(function (p) { return p.link; }).map(function (p) {
+      return { title: p.title, url: p.link, note: p.summary, domain: dom(p), image: p.cover, slug: p.slug };
+    });
+    var seen = {}, list = manual.concat(fromProjects).filter(function (l) { if (seen[l.url]) return false; seen[l.url] = 1; return true; });
+    $("linkGrid").innerHTML = list.map(function (l) {
+      var title = l.title || host(l.url);
+      return '<article class="link-card">' +
+        '<a class="link-thumb" href="' + esc(l.url) + '" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">' +
+          (l.image ? '<img loading="lazy" src="' + esc(asset(l.image)) + '" alt="">' : '<span>' + esc(initials(title)) + "</span>") + "</a>" +
+        '<div class="link-body">' +
+          (l.domain ? '<span class="card-cat">' + esc(l.domain) + "</span>" : "") +
+          "<h3>" + esc(title) + "</h3>" +
+          (l.note ? '<p class="link-note">' + esc(l.note) + "</p>" : "") +
+          '<div class="link-foot"><a class="link-open" href="' + esc(l.url) + '" target="_blank" rel="noopener">' + esc(host(l.url)) + ' <span aria-hidden="true">↗</span></a>' +
+          (l.slug ? '<a class="link-case" href="#p-' + esc(l.slug) + '">Case study</a>' : "") + "</div>" +
+        "</div></article>";
+    }).join("");
+    $("linkEmpty").hidden = list.length > 0;
+  }
+
   /* ---------- Tabs ---------- */
-  var TABS = ["work", "about", "experience", "resume"];
+  var TABS = ["work", "about", "experience", "resume", "certifications", "links"];
   function showTab(name) {
     TABS.forEach(function (t) {
       $("tab-" + t).setAttribute("aria-selected", String(t === name));
@@ -444,6 +486,12 @@
       } catch (e) { fallback(); }
     });
     lbBind($("projCanvas"));
+    $("certGrid").addEventListener("click", function (e) {
+      var b = e.target.closest("[data-cert]");
+      if (!b) return;
+      var imgs = (state.certImgs || []).filter(Boolean);
+      lbOpen(imgs, imgs.indexOf(state.certImgs[+b.getAttribute("data-cert")]));
+    });
     window.addEventListener("hashchange", function () { lbClose(); route(); });
   }
 
@@ -468,6 +516,8 @@
     renderResume();
     renderFilters();
     renderGrid();
+    renderCerts();
+    renderLinks();
     route();
   }
 

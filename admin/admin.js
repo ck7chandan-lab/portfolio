@@ -68,6 +68,8 @@
     save: "M5 3h11l5 5v13H3V3zm2 2v5h9V5zm5 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z",
     download: "M12 16 7 11l1.4-1.4 2.6 2.6V4h2v8.2l2.6-2.6L17 11zM5 20v-2h14v2z",
     close: "M6.4 5 12 10.6 17.6 5 19 6.4 13.4 12 19 17.6 17.6 19 12 13.4 6.4 19 5 17.6 10.6 12 5 6.4z",
+    award: "M12 2a7 7 0 0 1 4.6 12.3L18 22l-6-3-6 3 1.4-7.7A7 7 0 0 1 12 2zm0 2a5 5 0 1 0 0 10 5 5 0 0 0 0-10z",
+    link: "M10.6 13.4a1 1 0 0 0 1.4 0l4-4a3 3 0 0 0-4.2-4.2l-1.5 1.5 1.4 1.4 1.5-1.5a1 1 0 1 1 1.4 1.4l-4 4a1 1 0 0 0 0 1.4zm2.8-2.8a1 1 0 0 0-1.4 0l-4 4a3 3 0 0 0 4.2 4.2l1.5-1.5-1.4-1.4-1.5 1.5a1 1 0 1 1-1.4-1.4l4-4a1 1 0 0 0 0-1.4z",
     logout: "M10 3h10v18H10v-2h8V5h-8zm-.6 5 1.4 1.4L9.2 11H16v2H9.2l1.6 1.6L9.4 16l-4-4z"
   };
   function icon(name) {
@@ -568,7 +570,7 @@
   function go(view, fromHash) {
     var m = view.match(/^edit-(\d+)$/);
     if (m && S.data.projects[+m[1]]) { S.view = "edit"; S.editing = +m[1]; }
-    else if (["projects", "profile", "resume", "settings"].indexOf(view) > -1) { S.view = view; S.editing = null; }
+    else if (["projects", "profile", "resume", "certifications", "links", "settings"].indexOf(view) > -1) { S.view = view; S.editing = null; }
     else { S.view = "projects"; S.editing = null; }
     var target = S.view === "edit" ? "edit-" + S.editing : S.view;
     if (!fromHash && location.hash.slice(1) !== target) { location.hash = target; return; }
@@ -595,13 +597,15 @@
       nav("projects", "Projects", "grid"),
       nav("profile", "Profile", "user"),
       nav("resume", "Resume", "doc"),
+      nav("certifications", "Certifications", "award"),
+      nav("links", "Project links", "link"),
       nav("settings", "Settings", "gear"),
       h("a", { class: "rail-btn", href: siteURL(), target: "_blank", rel: "noopener" }, icon("ext"), h("span", { text: "View site" })),
       h("div", { class: "rail-spacer" }),
       h("div", { class: "rail-meta", text: where }));
     var main = h("main", { class: "main" });
     root.appendChild(h("div", { class: "shell" }, rail, main));
-    ({ projects: viewProjects, edit: viewEditor, profile: viewProfile, resume: viewResume, settings: viewSettings })[S.view](main);
+    ({ projects: viewProjects, edit: viewEditor, profile: viewProfile, resume: viewResume, certifications: viewCerts, links: viewLinks, settings: viewSettings })[S.view](main);
     updateSaveState();
   }
   function topBar(title, extra) {
@@ -635,7 +639,7 @@
       }
       var q = S.filter.trim().toLowerCase();
       P.forEach(function (p, i) {
-        if (q && (p.title + " " + p.client + " " + p.category).toLowerCase().indexOf(q) < 0) return;
+        if (q && (p.title + " " + p.client + " " + p.category + " " + p.domain).toLowerCase().indexOf(q) < 0) return;
         var star = iconBtn("star", p.featured ? "Remove Featured badge" : "Mark as Featured", function () { p.featured = !p.featured; markDirty("projects"); draw(); }, "star");
         star.setAttribute("aria-pressed", String(!!p.featured));
         list.appendChild(h("article", { class: "pcard", "data-i": i },
@@ -643,7 +647,7 @@
             p.cover ? h("img", { src: src(p.cover), alt: "", loading: "lazy" }) : h("div", { class: "ph", text: "No cover yet" })),
           h("div", { class: "pcard-body" },
             h("div", { class: "pcard-title", title: p.title, text: p.title || "Untitled" }),
-            h("div", { class: "muted", style: { "font-size": "12.5px" }, text: [p.category, p.client].filter(Boolean).join(" · ") || "—" }),
+            h("div", { class: "muted", style: { "font-size": "12.5px" }, text: [p.domain || p.category, p.client].filter(Boolean).join(" · ") || "No domain yet" }),
             h("div", { class: "pcard-foot" },
               h("span", { class: "pill " + (p.status === "draft" ? "pill-draft" : "pill-pub"), text: p.status === "draft" ? "Draft" : "Published" }),
               h("span", { class: "grow" }),
@@ -980,6 +984,7 @@
         return h("label", { class: "field" }, h("span", { class: "label" }, label), el, opts.hint ? h("span", { class: "hint", text: opts.hint }) : null);
       };
       var cats = {}, doms = {};
+      ["Healthcare", "SaaS", "Fintech", "E-commerce", "D2C", "Graphics", "Branding"].forEach(function (d) { doms[d] = 1; });
       S.data.projects.forEach(function (x) { if (x.category) cats[x.category] = 1; if (x.domain) doms[x.domain] = 1; });
       var dl = function (id, obj) { return h("datalist", { id: id }, Object.keys(obj).map(function (v) { return h("option", { value: v }); })); };
 
@@ -1045,8 +1050,8 @@
         f("Title", "title"),
         h("label", { class: "field" }, h("span", { class: "label" }, "URL name"), slugEl, slugHint),
         f("Short summary", "summary", { multiline: true, rows: 3, hint: "Shown on hover and at the top of the project." }),
-        h("div", { class: "row" }, f("Category", "category", { list: "dlCats", hint: "Becomes a filter on your site." }), f("Industry", "domain", { list: "dlDoms" })),
-        dl("dlCats", cats), dl("dlDoms", doms),
+        f("Domain", "domain", { list: "dlDoms", placeholder: "e.g. Healthcare", hint: "One word. It becomes a filter button above your projects. Pick one you used before, or type a new one." }),
+        dl("dlDoms", doms),
         f("Client / company", "client"),
         h("div", { class: "row" }, f("Your role", "role"), f("Year", "year")),
         f("Published date", "date", { type: "date" }),
@@ -1239,11 +1244,8 @@
       listSection("Education", r.education, Object.assign(function (e, ch) {
         return h("div", { class: "row" }, bindField(e, "degree", "Degree", null, ch), bindField(e, "school", "School", null, ch), bindField(e, "year", "Year", null, ch));
       }, { title: function (e) { return [e.degree, e.school].filter(Boolean).join(" — "); } }), function () { return { degree: "", school: "", year: "" }; }, dirty),
-      listSection("Certifications", r.certifications, Object.assign(function (c, ch) {
-        return h("div", { class: "stack" },
-          h("div", { class: "row" }, bindField(c, "name", "Certificate", null, ch), bindField(c, "issuer", "Issued by", null, ch)),
-          h("div", { class: "row" }, bindField(c, "detail", "Score / year", null, ch), bindField(c, "url", "Certificate link", { type: "url" }, ch)));
-      }, { title: function (c) { return c.name; } }), function () { return { name: "", issuer: "", detail: "", url: "" }; }, dirty),
+      h("div", { class: "section note-box" }, h("p", { style: { margin: 0 } }, "Certifications are edited on their own page, with links and certificate images. ",
+        h("a", { href: "#certifications" }, "Open Certifications →"))),
       h("details", { class: "section" }, h("summary", null, "Key projects & brands"),
         h("div", { class: "section-body" }, bindField(r, "projects", "", { multiline: true, rows: 9, lines: true, hint: "One per line." }, dirty))),
       listSection("Languages", r.languages, Object.assign(function (l, ch) {
@@ -1284,6 +1286,61 @@
     sec("Key projects & brands", r.projects.length ? "<ul>" + r.projects.map(function (p) { return "<li>" + esc(p) + "</li>"; }).join("") + "</ul>" : "");
     sec("Languages", r.languages.length ? "<p>" + r.languages.map(function (l) { return esc(l.name) + (l.level ? " (" + esc(l.level) + ")" : ""); }).join(" • ") + "</p>" : "");
     return out;
+  }
+
+  /* ================= Image picker field (certificates, link thumbnails) ================= */
+  function imageField(obj, key, label, hint, onchange) {
+    var box = h("div", { class: "thumb-edit" });
+    var draw = function () {
+      box.innerHTML = "";
+      if (obj[key]) box.appendChild(h("img", { src: src(obj[key]), alt: "" }));
+      else box.appendChild(h("span", { class: "muted", text: "No image" }));
+      box.appendChild(h("div", { class: "file-row" },
+        h("button", { type: "button", class: "btn btn-sm", onclick: function () {
+          pickFiles("image/*").then(function (f) {
+            if (!f.length) return;
+            upload(f[0], PRESET.content, key).then(function (path) { obj[key] = path; onchange(); draw(); }, function (e) { toast(e.message, true); });
+          });
+        } }, obj[key] ? "Change image" : "Upload image"),
+        obj[key] ? h("button", { type: "button", class: "btn btn-sm btn-danger", onclick: function () { obj[key] = ""; onchange(); draw(); } }, "Remove") : null));
+    };
+    draw();
+    return h("div", { class: "field" }, h("span", { class: "label" }, label), box, hint ? h("span", { class: "hint", text: hint }) : null);
+  }
+
+  /* ================= Certifications (stored in resume.json so the CV uses them too) ================= */
+  function viewCerts(main) {
+    var r = S.data.resume;
+    if (!Array.isArray(r.certifications)) r.certifications = [];
+    var dirty = function () { markDirty("resume"); };
+    main.appendChild(topBar("Certifications", { after: h("button", { type: "button", class: "btn", onclick: function () { preview("certifications"); } }, icon("eye"), "Preview") }));
+    main.appendChild(h("div", { class: "page page-narrow" },
+      h("p", { class: "muted", style: { margin: "0 0 14px" }, text: "Each certificate shows as a card on the Certifications page of your site, and also appears on your resume." }),
+      listSection("Certificates", r.certifications, Object.assign(function (c, ch) {
+        return h("div", { class: "stack" },
+          h("div", { class: "row" }, bindField(c, "name", "Certificate name", null, ch), bindField(c, "issuer", "Issued by", null, ch)),
+          h("div", { class: "row" }, bindField(c, "detail", "Year / score", { placeholder: "2026 or 98%" }, ch), bindField(c, "url", "Certificate link", { type: "url", placeholder: "https://", hint: "Verification or credential page." }, ch)),
+          imageField(c, "image", "Certificate image", "A photo or screenshot of the certificate. Visitors can click it to see it full size.", ch));
+      }, { title: function (c) { return c.name; } }), function () { return { name: "", issuer: "", detail: "", url: "", image: "" }; }, dirty, true)));
+  }
+
+  /* ================= Project links (stored in site.json) ================= */
+  function viewLinks(main) {
+    var s = S.data.site;
+    if (!Array.isArray(s.links)) s.links = [];
+    var dirty = function () { markDirty("site"); };
+    main.appendChild(topBar("Project links", { after: h("button", { type: "button", class: "btn", onclick: function () { preview("links"); } }, icon("eye"), "Preview") }));
+    var auto = S.data.projects.filter(function (p) { return p.link && p.status !== "draft"; });
+    main.appendChild(h("div", { class: "page page-narrow" },
+      h("p", { class: "muted", style: { margin: "0 0 14px" }, text: "Live websites, apps and prototypes you worked on. They show on the Project Links page of your site." +
+        (auto.length ? " Projects with a Live link (" + auto.map(function (p) { return p.title; }).join(", ") + ") are added there automatically." : " Any project with a Live link in its settings is also added there automatically.") }),
+      listSection("Links", s.links, Object.assign(function (l, ch) {
+        return h("div", { class: "stack" },
+          h("div", { class: "row" }, bindField(l, "title", "Name", { placeholder: "Mamaearth website" }, ch), bindField(l, "domain", "Domain", { placeholder: "D2C" }, ch)),
+          bindField(l, "url", "URL", { type: "url", placeholder: "https://" }, ch),
+          bindField(l, "note", "Short note", { multiline: true, rows: 2, placeholder: "What you designed for it" }, ch),
+          imageField(l, "image", "Thumbnail (optional)", "A screenshot of the site. Without one, a soft colour tile with the name is used.", ch));
+      }, { title: function (l) { return l.title; } }), function () { return { title: "", url: "", domain: "", note: "", image: "" }; }, dirty, true)));
   }
 
   /* ================= Settings ================= */
