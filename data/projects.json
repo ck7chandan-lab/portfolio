@@ -1,87 +1,5 @@
 [
   {
-    "slug": "infographics-from-2017-to-2018",
-    "title": "Infographics ",
-    "status": "published",
-    "featured": false,
-    "client": "",
-    "category": "",
-    "domain": "Ed tech",
-    "year": "2018",
-    "date": "2026-10-31",
-    "role": "Graphic Designer",
-    "tools": [
-      "Photoshop"
-    ],
-    "tags": [],
-    "summary": "Infographics from 2017 to 2018",
-    "cover": "/assets/uploads/untitled-rddmo-cover-1gnel.jpg",
-    "bg": "",
-    "modules": [
-      {
-        "type": "image",
-        "image": "/assets/uploads/infographics-from-2017-to-2018-1-xqjxw.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/infographics-from-2017-to-2018-2-mvzz9.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/infographics-from-2017-to-2018-3-0fu1t.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/infographics-from-2017-to-2018-4-dny7q.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/infographics-from-2017-to-2018-5-mparh.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/infographics-from-2017-to-2018-6-d7f0f.png",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/infographics-from-2017-to-2018-7-jbfi3.png",
-        "caption": "",
-        "width": "full"
-      }
-    ],
-    "link": ""
-  },
-  {
     "slug": "digital-banners",
     "title": "Digital Banners",
     "status": "published",
@@ -254,6 +172,88 @@
         "type": "image",
         "image": "/assets/uploads/digital-banners-26-rpxiq.jpg",
         "caption": "Happy Republic Day",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "infographics-from-2017-to-2018",
+    "title": "Infographics ",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "Ed tech",
+    "year": "2018",
+    "date": "2026-10-31",
+    "role": "Graphic Designer",
+    "tools": [
+      "Photoshop"
+    ],
+    "tags": [],
+    "summary": "Infographics from 2017 to 2018",
+    "cover": "/assets/uploads/untitled-rddmo-cover-1gnel.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/infographics-from-2017-to-2018-1-xqjxw.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/infographics-from-2017-to-2018-2-mvzz9.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/infographics-from-2017-to-2018-3-0fu1t.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/infographics-from-2017-to-2018-4-dny7q.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/infographics-from-2017-to-2018-5-mparh.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/infographics-from-2017-to-2018-6-d7f0f.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/infographics-from-2017-to-2018-7-jbfi3.png",
+        "caption": "",
         "width": "full"
       }
     ],
