@@ -380,7 +380,8 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-
 .canvas { display: flex; flex-direction: column; gap: var(--mod-gap, 0px); border-radius: 6px; overflow: hidden; }
 .canvas.has-bg { background: var(--canvas-bg); color: var(--canvas-ink, inherit); padding-block: 0; }
 .mod { margin: 0; min-width: 0; }
-.mod-image img { width: 100%; height: auto; display: block; }
+/* Images never grow past their real pixel width: small ones sit centred at actual size, large ones fill the column. */
+.mod-image img { width: auto; max-width: 100%; height: auto; display: block; margin: 0 auto; }
 .mod-image.is-contained { padding: clamp(16px, 5vw, 64px); }
 .mod figcaption, .mod-grid figcaption {
   font-size: 13px; text-align: center; padding: 10px 16px 18px; color: var(--ink-2);

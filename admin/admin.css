@@ -201,7 +201,7 @@ input:focus, select:focus, textarea:focus { outline: none; border-color: var(--a
 .mt-bar button { height: 28px; min-width: 30px; padding: 0 8px; border: 0; background: transparent; border-radius: 6px; cursor: pointer; color: var(--ink); font: 600 12.5px/1 var(--f-body); }
 .mt-bar button:hover { background: var(--panel); }
 .mt textarea { min-height: 220px; font: 400 14.5px/1.6 var(--f-mono); background: var(--panel); color: var(--ink); }
-.mi img { width: 100%; }
+.mi img { width: auto; max-width: 100%; height: auto; margin: 0 auto; }
 .mi.contained { padding: clamp(16px, 5vw, 64px); }
 .cap { width: 100%; border: 0; background: transparent; text-align: center; color: inherit; opacity: .8; padding: 10px 16px; font: 400 13px/1.4 var(--f-body); }
 .cap:focus { opacity: 1; box-shadow: none; outline: 1px dashed var(--accent); }
