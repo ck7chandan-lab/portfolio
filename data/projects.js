@@ -11,7 +11,9 @@ window.CK_DATA["data/projects.json"] = [
     "year": "2026",
     "date": "2026-10-31",
     "role": "",
-    "tools": [],
+    "tools": [
+      "Photoshop"
+    ],
     "tags": [],
     "summary": "Banner design for creatives",
     "cover": "/assets/uploads/untitled-xllt3-cover-g1746.jpg",
@@ -19,8 +21,158 @@ window.CK_DATA["data/projects.json"] = [
     "modules": [
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-xllt3-gif-yyqor.gif",
-        "caption": "",
+        "image": "/assets/uploads/digital-banners-1-hrney.jpg",
+        "caption": "Valentines Day",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-2-qhw7e.png",
+        "caption": "Weekend Sale",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-3-zwlj9.png",
+        "caption": "Subscription Expriring",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-4-5bwot.png",
+        "caption": "JAW Dropping Deals",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-5-pzsuq.png",
+        "caption": "Rush Hour",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-6-gv3ux.png",
+        "caption": "FREE Shipping",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-7-a5he7.png",
+        "caption": "Grand Gadgets Carnival",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-8-0u4in.png",
+        "caption": "7' Tab Free",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-9-l28yn.jpg",
+        "caption": "NEET 2018",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-10-nwjg6.jpg",
+        "caption": "Time Management",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-11-v84i8.jpg",
+        "caption": "An Engineer",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-12-2qe53.jpg",
+        "caption": "NEET/AIIMS",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-13-acgdw.jpg",
+        "caption": "JEE Adv. 2018 Rank?",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-14-ek59x.jpg",
+        "caption": "Supplement",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-15-mjrhq.jpg",
+        "caption": "Prepare For NEET",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-16-tmb4y.jpg",
+        "caption": "IIT JEE",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-17-zhqye.jpg",
+        "caption": "NEET Topper",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-18-7pfw4.jpg",
+        "caption": "Scholarship Test",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-19-a2tuu.jpg",
+        "caption": "Being Responsible",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-20-e9vfx.jpg",
+        "caption": "Give Happiness",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-21-xik0o.jpg",
+        "caption": "Dave Water",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-22-0zi4w.jpg",
+        "caption": "Healthy Environment ",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-23-3unnx.jpg",
+        "caption": "Planting Trees",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-24-cn8lo.jpg",
+        "caption": "SEO",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-25-k1d1v.jpg",
+        "caption": "What We Buy",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/digital-banners-26-rpxiq.jpg",
+        "caption": "Happy Republic Day",
         "width": "full"
       }
     ],
