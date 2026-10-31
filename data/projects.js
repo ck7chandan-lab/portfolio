@@ -3,7 +3,7 @@ window.CK_DATA["data/projects.json"] = [
   {
     "slug": "digital-banners",
     "title": "Digital Banners",
-    "status": "draft",
+    "status": "published",
     "featured": false,
     "client": "",
     "category": "",
