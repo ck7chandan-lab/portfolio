@@ -3,7 +3,7 @@ window.CK_DATA["data/projects.json"] = [
   {
     "slug": "google-adword-login-banner",
     "title": "Google Adword",
-    "status": "draft",
+    "status": "published",
     "featured": false,
     "client": "",
     "category": "",
