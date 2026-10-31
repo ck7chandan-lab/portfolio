@@ -1,6 +1,32 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "digital-banners",
+    "title": "Digital Banners",
+    "status": "draft",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2026",
+    "date": "2026-10-31",
+    "role": "",
+    "tools": [],
+    "tags": [],
+    "summary": "Banner design for creatives",
+    "cover": "/assets/uploads/untitled-xllt3-cover-g1746.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-xllt3-gif-yyqor.gif",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "google-adword-login-banner",
     "title": "Google Adword",
     "status": "published",
