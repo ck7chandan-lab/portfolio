@@ -1,21 +1,21 @@
 /* Layout: Behance-style profile, full width. Light banner, flat left sidebar (no card),
    tabbed 3-column project grid filling the rest of the page; case studies as one wide canvas.
-   Palette: warm off-white page, charcoal text, one deep-teal accent so project covers lead. */
+   Palette: cool off-white page, charcoal text, one indigo accent so project covers lead. */
 :root {
-  --paper: #FAFAF8;        /* page */
+  --paper: #FAFAFC;        /* page (cool off-white) */
   --surface: #FFFFFF;      /* bars, sheets */
-  --ink: #1C1C1C;          /* main text */
-  --ink-2: #6B6B66;        /* secondary text */
-  --line: #E7E5E0;         /* hairlines */
-  --accent: #0F766E;       /* deep teal */
-  --accent-hover: #0B5F58;
+  --ink: #1C1C24;          /* main text */
+  --ink-2: #64647A;        /* secondary text */
+  --line: #E5E5EE;         /* hairlines */
+  --accent: #4F46E5;       /* indigo: innovation, modern AI product */
+  --accent-hover: #4338CA;
   --accent-ink: #FFFFFF;
-  --tag: #E6F4F1;          /* soft teal fill */
-  --tag-ink: #0B5F58;
-  --ok: #0F766E;
-  --banner: linear-gradient(115deg, #E6F4F1 0%, #D5ECE7 45%, #BFE1DA 100%);
-  --dots: rgba(15, 118, 110, .14);
-  --shadow: 0 1px 2px rgba(28, 28, 28, .05), 0 6px 18px rgba(28, 28, 28, .06);
+  --tag: #EEF0FF;          /* soft indigo fill */
+  --tag-ink: #4338CA;
+  --ok: #4F46E5;
+  --banner: linear-gradient(115deg, #F1F2FF 0%, #E2E4FF 45%, #CDD0FB 100%);
+  --dots: rgba(79, 70, 229, .14);
+  --shadow: 0 1px 2px rgba(28, 28, 36, .05), 0 6px 18px rgba(28, 28, 36, .06);
 
   --f-display: "Source Sans 3", "Source Sans Pro", "Segoe UI", system-ui, sans-serif;
   --f-body: "Source Sans 3", "Source Sans Pro", "Segoe UI", system-ui, sans-serif;
@@ -30,17 +30,17 @@
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --paper: #121413; --surface: #1A1D1C; --ink: #ECEDEA; --ink-2: #A3A6A0; --line: #2C302E;
-    --accent: #2DB3A3; --accent-hover: #4CC7B8; --accent-ink: #08201D; --tag: #17312D; --tag-ink: #9EE0D5; --ok: #4CC7B8;
-    --banner: linear-gradient(115deg, #10302C 0%, #133934 50%, #18443E 100%); --dots: rgba(158, 224, 213, .12);
+    --paper: #111218; --surface: #191A22; --ink: #ECECF3; --ink-2: #A3A3B5; --line: #2A2B36;
+    --accent: #8B85FF; --accent-hover: #A5A1FF; --accent-ink: #12112A; --tag: #1F1E3D; --tag-ink: #C7C4FF; --ok: #A5A1FF;
+    --banner: linear-gradient(115deg, #1B1A3A 0%, #22205A 50%, #2C2972 100%); --dots: rgba(199, 196, 255, .12);
     --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3);
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --paper: #121413; --surface: #1A1D1C; --ink: #ECEDEA; --ink-2: #A3A6A0; --line: #2C302E;
-  --accent: #2DB3A3; --accent-hover: #4CC7B8; --accent-ink: #08201D; --tag: #17312D; --tag-ink: #9EE0D5; --ok: #4CC7B8;
-  --banner: linear-gradient(115deg, #10302C 0%, #133934 50%, #18443E 100%); --dots: rgba(158, 224, 213, .12);
+  --paper: #111218; --surface: #191A22; --ink: #ECECF3; --ink-2: #A3A3B5; --line: #2A2B36;
+  --accent: #8B85FF; --accent-hover: #A5A1FF; --accent-ink: #12112A; --tag: #1F1E3D; --tag-ink: #C7C4FF; --ok: #A5A1FF;
+  --banner: linear-gradient(115deg, #1B1A3A 0%, #22205A 50%, #2C2972 100%); --dots: rgba(199, 196, 255, .12);
   --shadow: 0 1px 2px rgba(0,0,0,.4), 0 6px 18px rgba(0,0,0,.3);
   color-scheme: dark;
 }

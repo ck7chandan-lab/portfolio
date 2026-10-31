@@ -1122,7 +1122,7 @@
       bannerBox.innerHTML = "";
       bannerBox.style.backgroundImage = s.banner ? 'url("' + src(s.banner) + '")' : "";
       bannerBox.classList.toggle("is-empty", !s.banner);
-      if (!s.banner) bannerBox.appendChild(h("span", { text: "Upload banner (3200 × 480). Without one, a soft teal banner is used." }));
+      if (!s.banner) bannerBox.appendChild(h("span", { text: "Upload banner (3200 × 480). Without one, a soft indigo banner is used." }));
       bannerBtns.innerHTML = "";
       add(bannerBtns, [
         h("button", { type: "button", class: "btn btn-sm", onclick: pickBanner }, s.banner ? "Change banner" : "Upload banner"),
