@@ -57,8 +57,11 @@
     var ini = initials(s.name);
     $("brandName").textContent = s.name;
     $("brandMark").textContent = ini;
-    $("footName").textContent = s.name;
-    $("year").textContent = new Date().getFullYear();
+    // Footer: phone and email only
+    var phone = (r.phone || s.phone || "").trim(), email = (s.email || r.email || "").trim();
+    $("footPhone").hidden = !phone; $("footEmail").hidden = !email;
+    if (phone) { $("footPhone").href = "tel:" + phone.replace(/[^\d+]/g, ""); $("footPhoneText").textContent = phone; }
+    if (email) { $("footEmail").href = "mailto:" + email; $("footEmailText").textContent = email; }
     $("pName").textContent = s.name;
     $("pRole").textContent = s.role;
     $("pLoc").textContent = s.location || "";
@@ -71,7 +74,7 @@
     else { ban.style.backgroundImage = ""; ban.classList.remove("has-img"); }
 
     var av = $("avatar");
-    if (s.photo) av.innerHTML = '<img src="' + esc(asset(s.photo)) + '" alt="' + esc(s.name) + '">';
+    if (s.photo) av.innerHTML = '<button type="button" class="avatar-zoom" id="avatarZoom" aria-label="View ' + esc(s.name) + '\'s photo larger"><img src="' + esc(asset(s.photo)) + '" alt="' + esc(s.name) + '"></button>';
     else av.innerHTML = '<span>' + esc(ini) + "</span>";
     $("ownerAvatar").innerHTML = s.photo ? '<img src="' + esc(asset(s.photo)) + '" alt="">' : esc(ini);
     setLink($("liBtn"), s.linkedin);
@@ -234,11 +237,119 @@
     $("linkEmpty").hidden = list.length > 0;
   }
 
+  /* ---------- Site search ---------- */
+  function plain(t) { return String(t || "").replace(/!\[[^\]]*\]\([^)]*\)/g, " ").replace(/\[([^\]]*)\]\([^)]*\)/g, "$1").replace(/[#*_>`~|-]+/g, " ").replace(/\s+/g, " ").trim(); }
+  function buildIndex() {
+    var s = state.site || {}, r = state.resume || {}, ix = [];
+    var add = function (type, title, sub, text, href, ext) { if (title) ix.push({ type: type, title: title, sub: sub || "", text: plain(text), href: href, ext: !!ext }); };
+    state.projects.filter(visible).forEach(function (p) {
+      var body = (p.modules || []).map(function (m) { return [m.text, m.caption].concat((m.images || []).map(function (g) { return g.caption; })).join(" "); }).join(" ");
+      add("Project", p.title, [dom(p), p.client, p.year].filter(Boolean).join(" · "),
+        [p.summary, p.category, p.domain, p.client, p.role, (p.tags || []).join(" "), (p.tools || []).join(" "), body].join(" "), "#p-" + p.slug);
+    });
+    (r.experience || []).forEach(function (x) {
+      add("Experience", x.role, [x.company, [x.start, x.end].filter(Boolean).join(" – ")].filter(Boolean).join(" · "), [x.company, x.location, (x.bullets || []).join(" ")].join(" "), "#experience");
+    });
+    (r.certifications || []).forEach(function (c) { add("Certification", c.name, [c.issuer, c.detail].filter(Boolean).join(" · "), c.issuer, "#certifications"); });
+    (s.links || []).forEach(function (l) { if (l && l.url) add("Link", l.title || host(l.url), [l.domain, host(l.url)].filter(Boolean).join(" · "), [l.note, l.url].join(" "), l.url, true); });
+    (s.skills || []).forEach(function (k) { add("Skill", k, "Skills", "", "#about"); });
+    (s.tools || []).forEach(function (k) { add("Tool", k, "Tools", "", "#about"); });
+    (r.skillGroups || []).forEach(function (g) { add("Expertise", g.name, "Resume", g.items, "#resume"); });
+    (r.education || []).forEach(function (e) { add("Education", e.degree, [e.school, e.year].filter(Boolean).join(" · "), "", "#about"); });
+    add("About", s.headline ? "About " + (s.name || "me") : "", "About", [s.headline, s.about].join(" "), "#about");
+    add("Resume", "Resume (PDF / Word)", "Download", [r.summary, "cv resume download pdf word"].join(" "), "#resume");
+    add("Contact", "Contact", s.email || "", "email hire contact phone " + (r.phone || ""), "#contact");
+    state.index = ix;
+  }
+  function hl(text, words) {
+    var out = esc(text);
+    words.forEach(function (w) { if (w.length > 1) out = out.replace(new RegExp("(" + w.replace(/[.*+?^${}()|[\]\\]/g, "\\$&") + ")", "ig"), "<mark>$1</mark>"); });
+    return out;
+  }
+  function snippet(text, w) {
+    var i = text.toLowerCase().indexOf(w);
+    if (i < 0) return "";
+    var a = Math.max(0, i - 50), b = Math.min(text.length, i + w.length + 70);
+    return (a ? "…" : "") + text.slice(a, b) + (b < text.length ? "…" : "");
+  }
+  function runSearch() {
+    var q = $("searchInput").value.trim().toLowerCase(), box = $("searchResults");
+    state.sActive = 0;
+    if (!q) {
+      var doms = {};
+      state.projects.filter(visible).forEach(function (p) { if (dom(p)) doms[dom(p)] = 1; });
+      var sugg = Object.keys(doms).concat((state.site.skills || []).slice(0, 4));
+      box.innerHTML = '<li class="s-hint">Search projects, skills, tools, experience, certifications and links.' +
+        (sugg.length ? '<div class="s-sugg">' + sugg.map(function (t) { return '<button type="button" data-sugg="' + esc(t) + '">' + esc(t) + "</button>"; }).join("") + "</div>" : "") + "</li>";
+      state.sHits = [];
+      return;
+    }
+    var words = q.split(/\s+/).filter(Boolean);
+    var hits = state.index.map(function (it) {
+      var t = it.title.toLowerCase(), hay = (it.title + " " + it.sub + " " + it.text).toLowerCase();
+      if (!words.every(function (w) { return hay.indexOf(w) > -1; })) return null;
+      var score = words.reduce(function (n, w) { return n + (t.indexOf(w) === 0 ? 6 : t.indexOf(w) > -1 ? 4 : it.sub.toLowerCase().indexOf(w) > -1 ? 2 : 1); }, 0);
+      if (it.type === "Project") score += 1;
+      return { it: it, score: score };
+    }).filter(Boolean).sort(function (a, b) { return b.score - a.score; }).slice(0, 12).map(function (x) { return x.it; });
+    state.sHits = hits;
+    box.innerHTML = hits.length ? hits.map(function (it, i) {
+      var snip = it.title.toLowerCase().indexOf(words[0]) < 0 && it.sub.toLowerCase().indexOf(words[0]) < 0 ? snippet(it.text, words[0]) : "";
+      return '<li><a class="s-item" href="' + esc(it.href) + '"' + (it.ext ? ' target="_blank" rel="noopener"' : "") + ' data-i="' + i + '" aria-selected="' + (i === 0) + '">' +
+        '<span class="s-type">' + esc(it.type) + "</span>" +
+        '<span class="s-main"><b>' + hl(it.title, words) + "</b>" + (it.sub ? "<small>" + hl(it.sub, words) + "</small>" : "") +
+        (snip ? '<span class="s-snip">' + hl(snip, words) + "</span>" : "") + "</span></a></li>";
+    }).join("") : '<li class="s-hint">No results for “' + esc(q) + '”. Try a project name, a skill or a domain.</li>';
+  }
+  function openSearch() {
+    if (!state.index) buildIndex();
+    $("search").hidden = false;
+    document.documentElement.classList.add("lb-open");
+    $("searchInput").select();
+    $("searchInput").focus();
+    runSearch();
+  }
+  function closeSearch() {
+    if ($("search").hidden) return;
+    $("search").hidden = true;
+    document.documentElement.classList.remove("lb-open");
+    $("searchBtn").focus({ preventScroll: true });
+  }
+  function bindSearch() {
+    $("searchBtn").addEventListener("click", openSearch);
+    $("searchClose").addEventListener("click", closeSearch);
+    $("search").addEventListener("click", function (e) {
+      if (e.target === $("search")) { closeSearch(); return; }
+      var sg = e.target.closest("[data-sugg]");
+      if (sg) { $("searchInput").value = sg.getAttribute("data-sugg"); runSearch(); $("searchInput").focus(); return; }
+      if (e.target.closest(".s-item")) closeSearch();
+    });
+    $("searchInput").addEventListener("input", runSearch);
+    $("searchInput").addEventListener("keydown", function (e) {
+      var items = $("searchResults").querySelectorAll(".s-item");
+      if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+        if (!items.length) return;
+        e.preventDefault();
+        state.sActive = (state.sActive + (e.key === "ArrowDown" ? 1 : -1) + items.length) % items.length;
+        items.forEach(function (a, i) { a.setAttribute("aria-selected", String(i === state.sActive)); });
+        items[state.sActive].scrollIntoView({ block: "nearest" });
+      } else if (e.key === "Enter" && items.length) {
+        e.preventDefault();
+        items[state.sActive].click();
+      }
+    });
+    document.addEventListener("keydown", function (e) {
+      var typing = /input|textarea|select/i.test((e.target && e.target.tagName) || "");
+      if ((e.key === "k" || e.key === "K") && (e.metaKey || e.ctrlKey)) { e.preventDefault(); openSearch(); }
+      else if (e.key === "/" && !typing && $("search").hidden) { e.preventDefault(); openSearch(); }
+      else if (e.key === "Escape") closeSearch();
+    });
+  }
+
   /* ---------- Tabs ---------- */
   var TABS = ["work", "about", "experience", "resume", "certifications", "links"];
   function showTab(name) {
     TABS.forEach(function (t) {
-      $("tab-" + t).setAttribute("aria-selected", String(t === name));
       $("panel-" + t).hidden = t !== name;
     });
     document.querySelectorAll("[data-tab-link]").forEach(function (a) {
@@ -456,12 +567,18 @@
 
   /* ---------- Events ---------- */
   function bind() {
-    document.querySelector(".tabs").addEventListener("click", function (e) {
-      var b = e.target.closest("[data-tab]");
-      if (!b) return;
-      var t = b.getAttribute("data-tab");
-      if (location.hash !== "#" + t) location.hash = t; else showTab(t);
+    // Phone / tablet menu
+    var topbar = document.querySelector(".topbar");
+    var setMenu = function (open) { topbar.classList.toggle("menu-open", open); $("menuBtn").setAttribute("aria-expanded", String(open)); $("menuBtn").setAttribute("aria-label", open ? "Close menu" : "Open menu"); };
+    $("menuBtn").addEventListener("click", function () { setMenu(!topbar.classList.contains("menu-open")); });
+    $("siteNav").addEventListener("click", function (e) { if (e.target.closest("a")) setMenu(false); });
+    document.addEventListener("click", function (e) { if (!e.target.closest(".topbar")) setMenu(false); });
+    // Profile photo opens in the image viewer
+    $("avatar").addEventListener("click", function (e) {
+      var img = e.target.closest("#avatarZoom") && $("avatar").querySelector("img");
+      if (img) lbOpen([{ src: img.currentSrc || img.src, alt: img.alt }], 0);
     });
+    bindSearch();
     $("filters").addEventListener("click", function (e) {
       var b = e.target.closest("[data-filter]");
       if (!b) return;
@@ -518,6 +635,7 @@
     renderGrid();
     renderCerts();
     renderLinks();
+    state.index = null;
     route();
   }
 
