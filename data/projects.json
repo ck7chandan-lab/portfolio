@@ -1,5 +1,196 @@
 [
   {
+    "slug": "gal-ux-case-study",
+    "title": "GAL - UX Case Study",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "HRMS",
+    "year": "2024",
+    "date": "2026-11-01",
+    "role": "Sr. UX Consultant and Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-4iaeq-cover-1ak0x.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-4iaeq-1-gxp2w.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-4iaeq-2-h62q6.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-4iaeq-3-gjpfk.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "grid",
+        "images": [
+          {
+            "image": "/assets/uploads/untitled-4iaeq-calendar-yc6u9.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 3349
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-departmental-portal-og4hf.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-document-library-nzn3p.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-e-services-hr-services-view-snsvv.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-emergency-response-ovekx.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-emergency-wardens-rxx3p.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-fire-fighters-tp7bf.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-gal-first-aiders-v8x8o.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-hamburger-menu-with-active-button-q8tfk.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 900
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-home-ceo-message-57axe.jpg",
+            "caption": "",
+            "w": 2880,
+            "h": 7594
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-image-gallery-xsu6p.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-manage-fvourite-1-t1y7n.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-manage-fvourite-3-vrh3o.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-my-desk-admin-1qx0g.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 2149
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-my-desk-normal-user-1p7gx.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1568
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-my-fvourite-1-ywk74.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1686
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-my-fvourite-3-qiiax.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-public-utility-wvc3o.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1080
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-souk-detail-page-14wzt.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 1470
+          },
+          {
+            "image": "/assets/uploads/untitled-4iaeq-souk-listing-page-5cc98.jpg",
+            "caption": "",
+            "w": 1440,
+            "h": 2085
+          }
+        ],
+        "size": "m",
+        "gap": 6
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-4iaeq-5-9eykr.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-4iaeq-6-5em6b.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-4iaeq-7-4hras.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-4iaeq-thank-xv24z.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "al-nabooda-dashboard-case-study",
     "title": "Al Nabooda Dashboard Case Study",
     "status": "published",
