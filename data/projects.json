@@ -1,5 +1,132 @@
 [
   {
+    "slug": "facebook-post",
+    "title": "Facebook Post",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2018",
+    "date": "2026-10-31",
+    "role": "Graphic Designer",
+    "tools": [
+      "Photoshop"
+    ],
+    "tags": [],
+    "summary": "All posts for companies facebook platform",
+    "cover": "/assets/uploads/untitled-po67r-cover-tq65k.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-1-aztjb.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-2-6rd3a.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-3-agn8p.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-4-gbz4k.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-5-o9vns.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-6-w5wdm.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-7-t14m4.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-8-6up9l.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-9-6qfsa.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-10-fo4n4.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-11-hmmzl.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-po67r-12-ycu6f.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "digital-banners",
     "title": "Digital Banners",
     "status": "published",
