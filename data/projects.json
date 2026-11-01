@@ -1,5 +1,61 @@
 [
   {
+    "slug": "untitled-8zxvv",
+    "title": "Untitled project",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2026",
+    "date": "2026-11-01",
+    "role": "",
+    "tools": [],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-8zxvv-cover-1xdmx.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8zxvv-1-671gz.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8zxvv-2-ni5xo.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8zxvv-3-fgtcq.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8zxvv-4-7d0hr.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8zxvv-5-ro2fs.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8zxvv-6-ob5jz.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "insurance-case-study",
     "title": "Insurance Case Study",
     "status": "published",
