@@ -1,6 +1,142 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "campiagn-pages",
+    "title": "Campiagn Pages",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2019",
+    "date": "2026-11-01",
+    "role": "UX/UI Designer ",
+    "tools": [
+      "Phototsh"
+    ],
+    "tags": [],
+    "summary": "For social media marketing to grow customers",
+    "cover": "/assets/uploads/untitled-q6nhp-cover-g10n8.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-1-01phi.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-2-euppz.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-3-4zgfm.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-4-9p7j4.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-5-g9j7b.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-6-pjhp3.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-7-9vinb.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-8-6f00l.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-9-0n0nb.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-10-6f3yo.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-11-rgnrp.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-13-kttgh.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-q6nhp-12-v60fa.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "facebook-post",
     "title": "Facebook Post",
     "status": "published",
