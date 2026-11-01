@@ -668,8 +668,8 @@ window.CK_DATA["data/projects.json"] = [
     "featured": false,
     "client": "",
     "category": "",
-    "domain": "IT Sector",
-    "year": "2018",
+    "domain": "",
+    "year": "2024",
     "date": "2026-11-01",
     "role": "UX Designer",
     "tools": [
