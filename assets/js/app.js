@@ -473,14 +473,23 @@
     window.addEventListener("resize", function () { if (!LB.el.hidden) lbFit(); });
   }
   // Is the image bigger than the screen in either direction?
+  // Tall images (long page screenshots) would be tiny if fitted to the screen height,
+  // so they open at full width instead and scroll from the top.
+  function lbTall() {
+    var img = LB.img, s = LB.scroll;
+    return img.naturalHeight * Math.min(1, s.clientWidth / img.naturalWidth) > s.clientHeight * 1.6 &&
+      img.naturalWidth * (s.clientHeight / img.naturalHeight) < s.clientWidth * 0.6;
+  }
   function lbBig() {
     var img = LB.img, s = LB.scroll;
+    if (lbTall()) return img.naturalWidth > s.clientWidth;
     return img.naturalWidth > s.clientWidth || img.naturalHeight > s.clientHeight;
   }
   function lbFit() {
     var img = LB.img;
     if (!img.naturalWidth) return;
-    var big = lbBig();
+    var big = lbBig(), tall = lbTall();
+    LB.el.classList.toggle("is-tall", tall);
     LB.el.classList.toggle("is-actual", LB.actual && big);
     LB.el.classList.toggle("can-zoom", big);
     if (LB.actual && big) {
@@ -488,7 +497,7 @@
     } else {
       // fit: never larger than the real size, never larger than the screen
       var vw = LB.scroll.clientWidth, vh = LB.scroll.clientHeight;
-      var k = Math.min(1, vw / img.naturalWidth, vh / img.naturalHeight);
+      var k = tall ? Math.min(1, vw / img.naturalWidth) : Math.min(1, vw / img.naturalWidth, vh / img.naturalHeight);
       img.style.width = Math.floor(img.naturalWidth * k) + "px"; img.style.height = Math.floor(img.naturalHeight * k) + "px";
     }
   }

@@ -240,17 +240,25 @@
       i.onerror = rej; i.src = url;
     });
   }
-  // preset: {w,h,crop} fixed crop | {max} longest-edge limit
+  // preset: {w,h,crop} fixed crop | {maxW} width limit only (tall screenshots keep their full length)
+  var CANVAS_MAX_AREA = 16e6; // Safari/iOS refuse canvases larger than ~16.7 million pixels
+  function original(file) { return { blob: file, ext: (file.name.split(".").pop() || "jpg").toLowerCase().replace("jpeg", "jpg") }; }
   function processImage(file, preset) {
-    if (!/^image\/(jpeg|png|webp|bmp)$/.test(file.type)) return Promise.resolve({ blob: file, ext: (file.name.split(".").pop() || "bin").toLowerCase() });
+    if (!/^image\/(jpeg|png|webp|bmp)$/.test(file.type)) return Promise.resolve(original(file));
     return loadImage(file).then(function (r) {
       var img = r.img, sw = img.naturalWidth, sh = img.naturalHeight, sx = 0, sy = 0, dw, dh;
+      if (!preset.crop) {
+        // Content images: keep the original file (full quality, no re-compression) unless it is wider than maxW.
+        var keep = sw <= preset.maxW && file.type !== "image/bmp" && file.size <= 25e6;
+        var tooBigForCanvas = Math.round(sh * preset.maxW / sw) * preset.maxW > CANVAS_MAX_AREA;
+        if (keep || (tooBigForCanvas && file.size <= 25e6)) { URL.revokeObjectURL(r.url); return original(file); }
+      }
       if (preset.crop) {
         var target = preset.w / preset.h;
         if (sw / sh > target) { var nw = sh * target; sx = (sw - nw) / 2; sw = nw; } else { var nh = sw / target; sy = (sh - nh) / 2; sh = nh; }
         dw = Math.min(preset.w, Math.round(sw)); dh = Math.round(dw / target);
       } else {
-        var scale = Math.min(1, preset.max / Math.max(sw, sh));
+        var scale = Math.min(1, preset.maxW / sw, Math.sqrt(CANVAS_MAX_AREA / (sw * sh)));
         dw = Math.round(sw * scale); dh = Math.round(sh * scale);
       }
       var c = document.createElement("canvas"); c.width = dw; c.height = dh;
@@ -268,7 +276,7 @@
       });
     });
   }
-  var PRESET = { cover: { w: 1440, h: 1170, crop: true }, avatar: { w: 640, h: 640, crop: true }, content: { max: 2400 }, none: null };
+  var PRESET = { cover: { w: 1440, h: 1170, crop: true }, avatar: { w: 640, h: 640, crop: true }, content: { maxW: 2880 }, none: null };
   function upload(file, preset, prefix) {
     if (file.size > 40e6) return Promise.reject(new Error(file.name + " is larger than 40 MB. Compress it first."));
     var p = preset ? processImage(file, preset) : Promise.resolve({ blob: file, ext: (file.name.split(".").pop() || "bin").toLowerCase() });
