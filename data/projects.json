@@ -1,5 +1,99 @@
 [
   {
+    "slug": "al-nabooda-dashboard-case-study",
+    "title": "Al Nabooda Dashboard Case Study",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "Automobile",
+    "year": "2024",
+    "date": "2026-11-01",
+    "role": "Sr. Product Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-hj5oh-cover-pjg4o.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cover-1440-1080-2wmmh.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-01-cover-overview-29cwf.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-02-business-challenge-target-users-4vd9y.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-03-assumptions-problem-statements-pro-4621e.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-04-task-analysis-information-architec-33p7o.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-05-data-model-metric-definitions-busi-4a6oc.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-06-main-flows-49l9u.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-07-wireframe-rationale-3ryfj.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-08-design-system-39gz3.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-09-final-screens-key-interactions-5xo1x.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-10-proposed-usability-testing-31v90.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-hj5oh-cs-12-thank-you-3wm2v.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "untitled-8zxvv",
     "title": "Untitled project",
     "status": "published",
