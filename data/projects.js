@@ -1,6 +1,140 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "international-projects",
+    "title": "International Projects",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2026",
+    "date": "2026-11-01",
+    "role": "Product Designer or UX Designer",
+    "tools": [
+      "Figma",
+      "Adobe XD",
+      "Photoshop"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-wo7w1-cover-2820g.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/international-projects-frame-6-r3xdk.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/international-projects-frame-7-04iu3.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/international-projects-frame-1-nohff.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/international-projects-frame-2-uopvg.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/international-projects-frame-3-17fzc.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/international-projects-frame-4-t5ezq.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/international-projects-frame-5-qo4cg.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "deck-slides",
+    "title": "Deck Slides",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "IT Sector",
+    "year": "2018",
+    "date": "2026-11-01",
+    "role": "UX Designer",
+    "tools": [
+      "Figma",
+      "Power Point"
+    ],
+    "tags": [],
+    "summary": "Project presentations deck slides",
+    "cover": "/assets/uploads/untitled-m1ef4-cover-9i2df.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/deck-slides-ppt-deck-slide-1-r9ob7.gif",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/deck-slides-ppt-deck-slide-2-yfvpy.gif",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/deck-slides-ppt-deck-slide-3-gr246.gif",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "campiagn-pages",
     "title": "Campiagn Pages",
     "status": "published",
