@@ -69,6 +69,10 @@
     $("pAvail").parentNode.hidden = !s.availability;
     $("pRole").parentNode.hidden = !s.role;
     $("pLoc").parentNode.hidden = !s.location;
+    var pPhone = (r.phone || s.phone || "").trim(), pEmail = (s.email || r.email || "").trim();
+    $("pPhone").textContent = pPhone; $("pPhone").href = "tel:" + pPhone.replace(/[^\d+]/g, ""); $("pPhone").parentNode.hidden = !pPhone;
+    $("pEmail").textContent = pEmail; $("pEmail").href = "mailto:" + pEmail; $("pEmail").parentNode.hidden = !pEmail;
+    $("mailCta").href = pEmail ? "mailto:" + pEmail : "#contact";
     var ban = $("banner");
     if (s.banner) { ban.style.backgroundImage = 'url("' + asset(s.banner).replace(/"/g, "%22") + '")'; ban.classList.add("has-img"); }
     else { ban.style.backgroundImage = ""; ban.classList.remove("has-img"); }

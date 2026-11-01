@@ -151,8 +151,13 @@ h1, h2, h3 { font-family: var(--f-display); text-wrap: balance; margin: 0; line-
 .p-info .p-avail { order: 3; display: inline-flex; align-items: center; gap: 8px; justify-self: start; margin-top: 4px;
   padding: 6px 12px; border-radius: 999px; background: color-mix(in srgb, var(--ok) 10%, var(--surface)); color: var(--ink); font-weight: 600; font-size: 13.5px; }
 .p-avail .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ok); box-shadow: 0 0 0 4px color-mix(in srgb, var(--ok) 22%, transparent); }
-.p-actions { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; width: 100%; margin-top: 20px; }
-.p-actions #liBtn { grid-column: 1 / -1; background: var(--surface); color: var(--ink); border-color: var(--line); }
+.p-link { color: inherit; text-decoration: none; overflow-wrap: anywhere; }
+.p-link:hover { color: var(--tag-ink); text-decoration: underline; text-underline-offset: 3px; }
+/* Email CTA full width; Resume + LinkedIn share the next row 50/50 */
+.p-actions { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; width: 100%; margin-top: 20px; }
+.p-actions .p-mail { grid-column: 1 / -1; }
+.p-actions:has(#liBtn[hidden]) .btn-soft { grid-column: 1 / -1; }
+.p-actions #liBtn { background: var(--surface); color: var(--ink); border-color: var(--line); }
 .p-actions #liBtn:hover { border-color: var(--ink-2); }
 .stats {
   margin: 20px 0 0; width: 100%; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 4px;
