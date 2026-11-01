@@ -9,7 +9,7 @@
   "linkedin": "https://www.linkedin.com/in/chandan-kumar-uxdesigner",
   "behance": "",
   "cv": "",
-  "photo": "",
+  "photo": "/assets/uploads/profile-portrait-400x400-dkcsg.png",
   "about": "I'm a Principal UI/UX & Product Designer with a design-engineering bent. I started in visual and web design, moved into product, and today lead UX for complex, data-heavy platforms where accuracy and trust matter as much as speed.\n\nMy work sits where research, systems thinking and craft meet. I map messy workflows, turn them into calm interfaces, and build the design systems and coded prototypes that let engineering ship them faithfully. Lately much of that work involves AI: designing human-in-the-loop flows where people can see, check and override what a model suggests.\n\nI've designed for regulated healthcare, a government enterprise dashboard, fintech, and D2C beauty brands, where checkout and discovery work lifted conversion by 6.5% and retention by 15%.",
   "skills": [
     "UX strategy & research",
@@ -35,5 +35,6 @@
     "Claude",
     "v0",
     "Lovable"
-  ]
+  ],
+  "banner": "/assets/uploads/banner-h8ipyu.jpg"
 }
