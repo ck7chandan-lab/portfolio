@@ -123,7 +123,7 @@ window.CK_DATA["data/projects.json"] = [
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-z2yyf-11-aetsf.jpg",
+        "image": "/assets/uploads/untitled-z2yyf-11-aetsf.png",
         "caption": "",
         "width": "full"
       },

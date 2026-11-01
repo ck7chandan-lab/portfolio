@@ -567,7 +567,33 @@
   }
 
   /* ================= App shell ================= */
+  /* Warn when this tab is running an older admin than the one on the server
+     (e.g. the tab was left open while an update was pushed). */
+  var MY_VERSION = (function () {
+    var el = document.querySelector('script[src*="admin.js"]');
+    var m = el && el.getAttribute("src").match(/[?&]v=([\w.-]+)/);
+    return m ? m[1] : "";
+  })();
+  var versionWarned = false;
+  function checkVersion() {
+    if (versionWarned || !MY_VERSION || location.protocol === "file:") return;
+    fetch("index.html?check=" + Date.now(), { cache: "no-store" }).then(function (r) { return r.ok ? r.text() : ""; }).then(function (html) {
+      var m = html.match(/admin\.js\?v=([\w.-]+)/);
+      if (!m || m[1] === MY_VERSION || versionWarned) return;
+      versionWarned = true;
+      var bar = h("div", { class: "update-bar", role: "alert" },
+        h("span", { text: "A newer version of the admin is available. Save your changes, then reload before uploading more images." }),
+        h("button", { type: "button", class: "btn btn-sm btn-primary", onclick: function () {
+          if (isDirty() && !window.confirm("You have unsaved changes. Reload anyway?")) return;
+          location.reload();
+        } }, "Reload now"));
+      document.body.appendChild(bar);
+    }).catch(function () {});
+  }
   function startApp() {
+    checkVersion();
+    window.addEventListener("focus", checkVersion);
+    setInterval(checkVersion, 5 * 60 * 1000);
     window.addEventListener("beforeunload", function (e) { if (isDirty()) { e.preventDefault(); e.returnValue = ""; } });
     document.addEventListener("keydown", function (e) {
       if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "s") { e.preventDefault(); save(); }
