@@ -5,7 +5,7 @@
   "status": "Serving notice period · Immediate joiner · Open to relocate",
   "email": "chandanmodi1310@gmail.com",
   "phone": "+91 9911253340",
-  "website": "",
+  "website": "https://ck7chandan-lab.github.io/portfolio/",
   "linkedin": "https://www.linkedin.com/in/chandan-kumar-uxdesigner",
   "credential": "HFI – Certified Usability Analyst (CUA™)",
   "summary": "Principal UX and Product Designer with 9+ years of end-to-end design experience, leading product design for AI-powered enterprise SaaS, healthcare, fintech, HRMS, travel, BFSI, FMCG, edtech, job-tech and e-commerce platforms.\n\nI've worked across enterprises (Dubai Police, Pactera, GAL), healthcare products (Centauri AI Platform, Clinithink, IES) and high-growth consumer brands (Mamaearth, Aqualogica). I partner with Product, Engineering and business stakeholders to turn complex workflows into measurable business outcomes, and I mentor design teams. Open to relocating.",
@@ -103,13 +103,39 @@
     }
   ],
   "education": [
-    { "degree": "MCA", "school": "Mewar University of Rajasthan", "year": "2017" },
-    { "degree": "BCA", "school": "Mewar University of Rajasthan", "year": "2015" }
+    {
+      "degree": "MCA",
+      "school": "Mewar University of Rajasthan",
+      "year": "2017"
+    },
+    {
+      "degree": "BCA",
+      "school": "Mewar University of Rajasthan",
+      "year": "2015"
+    }
   ],
   "certifications": [
-    { "name": "Certified Usability Analyst (CUA™)", "issuer": "Human Factors International", "detail": "2026", "url": "" },
-    { "name": "AI for Designers", "issuer": "Interaction Design Foundation", "detail": "98%", "url": "" },
-    { "name": "User Research — Methods and Best Practices", "issuer": "Interaction Design Foundation", "detail": "92%", "url": "" }
+    {
+      "name": "Certified Usability Analyst (CUA™)",
+      "issuer": "Human Factors International",
+      "detail": "2026",
+      "url": "https://hfiinstitute.com/in/verify?credential=f1af9cd0-8db1-459e-9aa7-8fe6aca3d23e",
+      "image": "/assets/uploads/image-chandan-kumar-cua-course-completion-cert-q9md4.jpg"
+    },
+    {
+      "name": "AI for Designers",
+      "issuer": "Interaction Design Foundation",
+      "detail": "98%",
+      "url": "https://ixdf.org/members/chandan-kumar-3/certificate/course/83c2bbac-a376-49e0-924a-2fe8c1d29221",
+      "image": "/assets/uploads/image-course-certificate-ai-for-designers-7v1n4.jpg"
+    },
+    {
+      "name": "User Research — Methods and Best Practices",
+      "issuer": "Interaction Design Foundation",
+      "detail": "92%",
+      "url": "https://ixdf.org/members/chandan-kumar-3/certificate/course/1bc36b0c-9bd8-4b8f-b2f4-779047fa1401",
+      "image": "/assets/uploads/image-course-certificate-ai-for-designers-0owny.jpg"
+    }
   ],
   "projects": [
     "Centauri — AI healthcare platform (human-AI interaction and workflow optimisation)",
@@ -125,8 +151,14 @@
     "Aakash Education — web, app and dashboard experience"
   ],
   "languages": [
-    { "name": "English", "level": "Fluent" },
-    { "name": "Hindi", "level": "Native" }
+    {
+      "name": "English",
+      "level": "Fluent"
+    },
+    {
+      "name": "Hindi",
+      "level": "Native"
+    }
   ],
   "pdfFile": "",
   "docxFile": "",
