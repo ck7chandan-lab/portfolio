@@ -1,5 +1,81 @@
 [
   {
+    "slug": "staze-web-and-mobile-ui-design",
+    "title": "Staze - Web and Mobile UI Design",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2023",
+    "date": "2026-11-01",
+    "role": "Sr. UI Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-60hh6-cover-u7bnt.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-1-s8xa4.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-2-qrv5g.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-3-twihd.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-4-s6vx2.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-5-s83f6.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-6-pe0tq.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-7-pirsl.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-8-s1dwh.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-60hh6-9-ryd6u.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "gal-ux-case-study",
     "title": "GAL - UX Case Study",
     "status": "published",
