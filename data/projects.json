@@ -1,5 +1,91 @@
 [
   {
+    "slug": "mamaearth-filter",
+    "title": "Mamaearth Filter",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2022",
+    "date": "2026-11-02",
+    "role": "UX Researcher + UX Designer",
+    "tools": [],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-ywc44-cover-7netm.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/mamaearth-filter-1-30pqw.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-2-eqt2i.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-3-ee3y9.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-4-el5uf.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-5-e7l3i.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-6-d168m.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-7-f30j7.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-8-e61tw.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-9-d754c.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-10-fh2gz.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-11-cyohc.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "tdc-ux-case-study",
     "title": "TDC - UX Case Study",
     "status": "published",
