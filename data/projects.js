@@ -1,6 +1,203 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "pactera-job-portal-dashboard",
+    "title": "Pactera - Job Portal Dashboard",
+    "status": "draft",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "Jobs",
+    "year": "2024",
+    "date": "2026-11-02",
+    "role": "Sr. Product Designer",
+    "tools": [
+      "Adobe XD"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-f3gr0-cover-296ee.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-718bf0203874677-6add26885fef2-g8r7k.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-2-dy43v.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-3-617gy.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-4-piwgj.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-5-obk4s.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-6-gvrmf.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-7-hp92d.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-8-x4kr3.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-9-ujytp.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-10-fvvry.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-11-honmk.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-12-i260g.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-13-rlcw6.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-14-22ugd.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-15-i64sm.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-16-avfrl.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-17-07xja.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-19-oivob.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-20-ww4u5.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "text",
+        "text": "\nTHE END"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "staze-web-and-mobile-ui-design",
     "title": "Staze - Web and Mobile UI Design",
     "status": "published",
