@@ -1,6 +1,100 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "design-system",
+    "title": "Design System",
+    "status": "published",
+    "featured": false,
+    "client": "Innova Solutions Pvt Ltd",
+    "category": "",
+    "domain": "Healthcare",
+    "year": "2026",
+    "date": "2026-11-02",
+    "role": "Principal UX Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-8x3m6-cover-fo9sv.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-00-cover-xvja7.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-01-overview-and-role-xdyaz.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-02-why-a-design-system-x24li.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-03-problems-and-goals-xgde2.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-04-foundations-variables-ykk1u.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-05-foundations-styles-yv3hi.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-06-components-and-states-y7ino.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-07-library-tour-every-board-zszz2.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-08-light-and-dark-modes-yi3cj.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-09-healthcare-screens-y7yy0.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-10-moodboard-agent-layouts-and-patient-c-z5xem.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-thank-you-yee2o.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "aqualogica-ux-case-study",
     "title": "Aqualogica UX Case Study",
     "status": "published",
@@ -137,92 +231,6 @@ window.CK_DATA["data/projects.json"] = [
     "link": ""
   },
   {
-    "slug": "mamaearth-filter",
-    "title": "Mamaearth Filter",
-    "status": "published",
-    "featured": false,
-    "client": "",
-    "category": "",
-    "domain": "E-commerce",
-    "year": "2022",
-    "date": "2026-11-02",
-    "role": "UX Researcher + UX Designer",
-    "tools": [],
-    "tags": [],
-    "summary": "",
-    "cover": "/assets/uploads/untitled-ywc44-cover-7netm.jpg",
-    "bg": "",
-    "modules": [
-      {
-        "type": "image",
-        "image": "/assets/uploads/mamaearth-filter-1-30pqw.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-2-eqt2i.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-3-ee3y9.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-4-el5uf.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-5-e7l3i.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-6-d168m.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-7-f30j7.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-8-e61tw.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-9-d754c.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-10-fh2gz.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-ywc44-11-cyohc.png",
-        "caption": "",
-        "width": "full"
-      }
-    ],
-    "link": ""
-  },
-  {
     "slug": "tdc-ux-case-study",
     "title": "TDC - UX Case Study",
     "status": "published",
@@ -304,6 +312,92 @@ window.CK_DATA["data/projects.json"] = [
       {
         "type": "image",
         "image": "/assets/uploads/tdc-ux-case-study-11-nq5ii.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "mamaearth-filter",
+    "title": "Mamaearth Filter",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2022",
+    "date": "2026-11-02",
+    "role": "UX Researcher + UX Designer",
+    "tools": [],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-ywc44-cover-7netm.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/mamaearth-filter-1-30pqw.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-2-eqt2i.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-3-ee3y9.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-4-el5uf.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-5-e7l3i.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-6-d168m.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-7-f30j7.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-8-e61tw.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-9-d754c.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-10-fh2gz.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-11-cyohc.png",
         "caption": "",
         "width": "full"
       }
