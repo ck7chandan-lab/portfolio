@@ -1,95 +1,6 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
-    "slug": "dashboards-saas-enterprise",
-    "title": "Dashboards - SAAS Enterprise",
-    "status": "published",
-    "featured": false,
-    "client": "",
-    "category": "",
-    "domain": "",
-    "year": "2026",
-    "date": "2026-11-02",
-    "role": "",
-    "tools": [],
-    "tags": [],
-    "summary": "",
-    "cover": "",
-    "bg": "",
-    "modules": [
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-1grzg-4-1j6fr.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-1grzg-5-2b7x1.png",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-1grzg-6-11q3u.png",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-1grzg-3-bu4zl.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-1grzg-2-fibcr.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-1grzg-1-ly2o5.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/dashboards-saas-enterprise-7-1f45a.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "divider"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/dashboards-saas-enterprise-8-g43ob.jpg",
-        "caption": "",
-        "width": "full"
-      }
-    ],
-    "link": ""
-  },
-  {
     "slug": "aqualogica-ux-case-study",
     "title": "Aqualogica UX Case Study",
     "status": "published",
@@ -459,6 +370,86 @@ window.CK_DATA["data/projects.json"] = [
       {
         "type": "image",
         "image": "/assets/uploads/untitled-8x3m6-thank-you-yee2o.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "dashboards-saas-enterprise",
+    "title": "Dashboards - SAAS Enterprise",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2026",
+    "date": "2026-11-02",
+    "role": "",
+    "tools": [],
+    "tags": [],
+    "summary": "",
+    "cover": "",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-4-1j6fr.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-5-2b7x1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-6-11q3u.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-3-bu4zl.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-1-ly2o5.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/dashboards-saas-enterprise-7-1f45a.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/dashboards-saas-enterprise-8-g43ob.jpg",
         "caption": "",
         "width": "full"
       }
