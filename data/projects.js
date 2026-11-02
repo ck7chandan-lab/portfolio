@@ -390,7 +390,7 @@ window.CK_DATA["data/projects.json"] = [
     "tools": [],
     "tags": [],
     "summary": "",
-    "cover": "",
+    "cover": "/assets/uploads/dashboards-saas-enterprise-cover-nu1z3.jpg",
     "bg": "",
     "modules": [
       {
