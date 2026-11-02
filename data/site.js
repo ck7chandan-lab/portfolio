@@ -5,7 +5,7 @@ window.CK_DATA["data/site.json"] = {
   "headline": "I design enterprise products that stay clear under pressure — from AI-assisted clinical workflows to high-volume D2C storefronts.",
   "intro": "Nine-plus years shaping products across healthcare, fintech, government, D2C and e-commerce. I work end to end: research, flows, design systems, and front-end prototypes in HTML, CSS and JS.",
   "location": "Delhi, India",
-  "availability": "Open to new roles",
+  "availability": "Immediate Joiner",
   "email": "chandanmodi1310@gmail.com",
   "linkedin": "https://www.linkedin.com/in/chandan-kumar-uxdesigner",
   "behance": "",
