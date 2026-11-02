@@ -3,7 +3,7 @@ window.CK_DATA["data/projects.json"] = [
   {
     "slug": "aqualogica-ux-case-study",
     "title": "Aqualogica UX Case Study",
-    "status": "draft",
+    "status": "published",
     "featured": false,
     "client": "",
     "category": "",
