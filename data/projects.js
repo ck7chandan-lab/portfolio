@@ -156,126 +156,126 @@ window.CK_DATA["data/projects.json"] = [
     ],
     "tags": [],
     "summary": "",
-    "cover": "/assets/uploads/untitled-2obkk-cover-8slh9.jpg",
+    "cover": "/assets/uploads/clarion-view-centauri-cover-hcgyl.jpg",
     "bg": "",
     "modules": [
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-00-clarion-view-me2j9.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-00-clarion-view-octls.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-01-context-5mzsu.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-01-context-l5hs1.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-02-problem-6tnel.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-02-problem-m56td.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-03-role-process-5d6f7.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-03-role-process-lycdz.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-04-user-research-6s644.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-04-user-research-mi4ab.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-05-research-to-insight-73xs6.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-05-research-to-insight-nng4e.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-06-personas-59pl5.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-06-personas-mq3os.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-07-information-architecture-6h5zb.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-07-information-architecture-mzp6b.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-08-user-flows-67rcm.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-08-user-flows-ndmng.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-09-wireframes-7zt6g.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-09-wireframes-n5e08.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-10-solution-ai-approach-8imew.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-10-solution-ai-approach-onro5.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-11-the-solution-progressive-disclosure-7rjst.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-11-the-solution-progressive-disclosure-nqb34.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-12-four-key-design-decisions-8ty2u.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-12-four-key-design-decisions-oeg1x.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-13-risk-adjustment-agent-8zjma.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-13-risk-adjustment-agent-oumh6.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-14-outpatient-summary-agent-83nwe.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-14-outpatient-summary-agent-omr6b.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-15-patient-view-87ezn.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-15-patient-view-p14jd.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-16-patient-view-mobile-77bpy.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-16-patient-view-mobile-ol8ky.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-17-validation-impact-6dee2.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-17-validation-impact-nupg1.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-18-what-i-learned-6rxe7.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-18-what-i-learned-m7sle.jpg",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-2obkk-thank-you-71tml.jpg",
+        "image": "/assets/uploads/clarion-view-centauri-thank-you-n1pyr.jpg",
         "caption": "",
         "width": "full"
       }
