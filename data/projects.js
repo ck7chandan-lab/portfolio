@@ -1,6 +1,52 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "games",
+    "title": "GAMES",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2019 to 2022",
+    "date": "2026-11-02",
+    "role": "UI/UX Designer, Frontend Developer",
+    "tools": [
+      "Photoshop"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/games-cover-3o5lo.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-3-z4g8d.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-2-zd74m.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-5-w8x3e.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-1-zrcg6.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "pactera-job-portal-dashboard",
     "title": "Pactera - Job Portal Dashboard",
     "status": "published",
