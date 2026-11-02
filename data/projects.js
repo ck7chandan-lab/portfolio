@@ -1,6 +1,990 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "aqualogica-ux-case-study",
+    "title": "Aqualogica UX Case Study",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2022",
+    "date": "2026-11-02",
+    "role": "Sr. UI/UX Designer and UX Researcher",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-5oxxc-cover-0dfsr.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-1-z4uwb.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-2-z41w6.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-3-xhpfa.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-4-y6psy.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-5-z7sfy.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-6-zhf2t.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-7-x5mjj.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-8-y84kh.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-9-ybt77.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-10-0nxk1.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-11-08f4e.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-12-yu4nd.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-13-z9dtq.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-14-07rps.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-15-02ctt.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-16-0mfss.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-17-zq29u.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-18-0g6xm.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-19-y4v5g.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "clarion-view-centauri",
+    "title": "Clarion View - Centauri",
+    "status": "published",
+    "featured": false,
+    "client": "Innova Solutions Pvt Ltd",
+    "category": "",
+    "domain": "Healthcare",
+    "year": "2026",
+    "date": "2026-11-02",
+    "role": "Principal UI/UX Designer",
+    "tools": [
+      "Figma",
+      "Perplexity",
+      "Copilate",
+      "Google Stich",
+      "Chat GPT"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-2obkk-cover-8slh9.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-00-clarion-view-me2j9.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-01-context-5mzsu.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-02-problem-6tnel.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-03-role-process-5d6f7.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-04-user-research-6s644.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-05-research-to-insight-73xs6.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-06-personas-59pl5.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-07-information-architecture-6h5zb.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-08-user-flows-67rcm.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-09-wireframes-7zt6g.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-10-solution-ai-approach-8imew.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-11-the-solution-progressive-disclosure-7rjst.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-12-four-key-design-decisions-8ty2u.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-13-risk-adjustment-agent-8zjma.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-14-outpatient-summary-agent-83nwe.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-15-patient-view-87ezn.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-16-patient-view-mobile-77bpy.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-17-validation-impact-6dee2.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-18-what-i-learned-6rxe7.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-thank-you-71tml.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "design-system",
+    "title": "Design System",
+    "status": "published",
+    "featured": false,
+    "client": "Innova Solutions Pvt Ltd",
+    "category": "",
+    "domain": "Healthcare",
+    "year": "2026",
+    "date": "2026-11-02",
+    "role": "Principal UX Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-8x3m6-cover-fo9sv.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-00-cover-xvja7.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-01-overview-and-role-xdyaz.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-02-why-a-design-system-x24li.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-03-problems-and-goals-xgde2.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-04-foundations-variables-ykk1u.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-05-foundations-styles-yv3hi.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-06-components-and-states-y7ino.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-07-library-tour-every-board-zszz2.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-08-light-and-dark-modes-yi3cj.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-09-healthcare-screens-y7yy0.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-10-moodboard-agent-layouts-and-patient-c-z5xem.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-8x3m6-thank-you-yee2o.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "dashboards-saas-enterprise",
+    "title": "Dashboards - SAAS Enterprise",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2026",
+    "date": "2026-11-02",
+    "role": "",
+    "tools": [],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/dashboards-saas-enterprise-cover-nu1z3.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-4-1j6fr.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-5-2b7x1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-6-11q3u.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-3-bu4zl.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-1-ly2o5.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/dashboards-saas-enterprise-7-1f45a.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/dashboards-saas-enterprise-8-g43ob.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "tdc-ux-case-study",
+    "title": "TDC - UX Case Study",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2022-2023",
+    "date": "2026-11-02",
+    "role": "Sr. UI/UX Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-xfdl6-cover-m282k.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-xfdl6-1-8qt9i.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-2-2s1hc.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-3-ma7sg.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-4-pn5ub.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-5-n4b9x.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-6-o7wir.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-7-ovhl6.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-8-oh1zh.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-9-pgmky.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-10-qb1h1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-11-nq5ii.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "mamaearth-filter",
+    "title": "Mamaearth Filter",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2022",
+    "date": "2026-11-02",
+    "role": "UX Researcher + UX Designer",
+    "tools": [],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-ywc44-cover-7netm.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/mamaearth-filter-1-30pqw.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-2-eqt2i.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-3-ee3y9.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-4-el5uf.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-5-e7l3i.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-6-d168m.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-7-f30j7.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-8-e61tw.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-9-d754c.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-10-fh2gz.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-ywc44-11-cyohc.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "kind-life-ux-kind-life",
+    "title": "Kind Life - UX Kind Life",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2019 to 2021",
+    "date": "2026-11-02",
+    "role": "UX Researcher and Product Designer",
+    "tools": [
+      "Adobe XD",
+      "Photoshop",
+      "Zeplin",
+      "Balsamiq"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-7nfrq-cover-l0elq.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-1-z3955.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-2-optional-y8skf.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-3-v7tmf.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-4-vvnif.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-5-u8zr1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-6-wvgee.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-7-x0ehr.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-8-wko0b.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-9-xou8g.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-10-xadvc.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-11-w504o.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-12-xddog.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-13-wohwd.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-14-yr6rk.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-15-y3vf1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-16-zri7b.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-17-xch4o.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-18-yfnh5.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-19-xc66v.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-20-yze1f.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-21-ymbkn.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-22-w0is8.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "pactera-job-portal-dashboard",
+    "title": "Pactera - Job Portal Dashboard",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "Jobs",
+    "year": "2024",
+    "date": "2026-11-02",
+    "role": "Sr. Product Designer",
+    "tools": [
+      "Adobe XD"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-f3gr0-cover-296ee.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-718bf0203874677-6add26885fef2-g8r7k.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-2-dy43v.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-3-617gy.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-4-piwgj.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-5-obk4s.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-6-gvrmf.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-7-hp92d.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-8-x4kr3.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-9-ujytp.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-10-fvvry.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-11-honmk.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-12-i260g.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-13-rlcw6.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-14-22ugd.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-15-i64sm.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-16-avfrl.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-17-07xja.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-19-oivob.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/pactera-job-portal-dashboard-20-ww4u5.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "text",
+        "text": "\nTHE END"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "staze-web-and-mobile-ui-design",
     "title": "Staze - Web and Mobile UI Design",
     "status": "published",
@@ -702,6 +1686,52 @@ window.CK_DATA["data/projects.json"] = [
       {
         "type": "image",
         "image": "/assets/uploads/deck-slides-ppt-deck-slide-3-gr246.gif",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "games",
+    "title": "GAMES",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "Gamificatio",
+    "year": "2019 to 2022",
+    "date": "2026-11-02",
+    "role": "UI/UX Designer, Frontend Developer",
+    "tools": [
+      "Photoshop"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/games-cover-3o5lo.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-3-z4g8d.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-2-zd74m.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-5-w8x3e.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-1-zrcg6.jpg",
         "caption": "",
         "width": "full"
       }
