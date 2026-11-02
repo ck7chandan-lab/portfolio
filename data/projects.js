@@ -1,45 +1,156 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
-    "slug": "games",
-    "title": "GAMES",
+    "slug": "kind-life-ux-kind-life",
+    "title": "Kind Life - UX Kind Life",
     "status": "published",
     "featured": false,
     "client": "",
     "category": "",
-    "domain": "E-commerce",
-    "year": "2019 to 2022",
+    "domain": "",
+    "year": "2019 to 2021",
     "date": "2026-11-02",
-    "role": "UI/UX Designer, Frontend Developer",
+    "role": "UX Researcher and",
     "tools": [
-      "Photoshop"
+      "Adobe XD",
+      "Photoshop",
+      "Zeplin",
+      "Balsamiq"
     ],
     "tags": [],
     "summary": "",
-    "cover": "/assets/uploads/games-cover-3o5lo.jpg",
+    "cover": "/assets/uploads/untitled-7nfrq-cover-l0elq.jpg",
     "bg": "",
     "modules": [
       {
         "type": "image",
-        "image": "/assets/uploads/games-3-z4g8d.jpg",
+        "image": "/assets/uploads/untitled-7nfrq-1-z3955.png",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/games-2-zd74m.jpg",
+        "image": "/assets/uploads/untitled-7nfrq-2-optional-y8skf.png",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/games-5-w8x3e.jpg",
+        "image": "/assets/uploads/untitled-7nfrq-3-v7tmf.png",
         "caption": "",
         "width": "full"
       },
       {
         "type": "image",
-        "image": "/assets/uploads/games-1-zrcg6.jpg",
+        "image": "/assets/uploads/untitled-7nfrq-4-vvnif.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-5-u8zr1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-6-wvgee.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-7-x0ehr.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-8-wko0b.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-9-xou8g.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-10-xadvc.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-11-w504o.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-12-xddog.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-13-wohwd.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-14-yr6rk.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-15-y3vf1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-16-zri7b.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-17-xch4o.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-18-yfnh5.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-19-xc66v.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-20-yze1f.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-21-ymbkn.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7nfrq-22-w0is8.png",
         "caption": "",
         "width": "full"
       }
@@ -945,6 +1056,52 @@ window.CK_DATA["data/projects.json"] = [
       {
         "type": "image",
         "image": "/assets/uploads/deck-slides-ppt-deck-slide-3-gr246.gif",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "games",
+    "title": "GAMES",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "Gamificatio",
+    "year": "2019 to 2022",
+    "date": "2026-11-02",
+    "role": "UI/UX Designer, Frontend Developer",
+    "tools": [
+      "Photoshop"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/games-cover-3o5lo.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-3-z4g8d.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-2-zd74m.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-5-w8x3e.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/games-1-zrcg6.jpg",
         "caption": "",
         "width": "full"
       }
