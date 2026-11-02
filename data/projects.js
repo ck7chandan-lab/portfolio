@@ -10,7 +10,7 @@ window.CK_DATA["data/projects.json"] = [
     "domain": "",
     "year": "2019 to 2021",
     "date": "2026-11-02",
-    "role": "UX Researcher and",
+    "role": "UX Researcher and Product Designer",
     "tools": [
       "Adobe XD",
       "Photoshop",
