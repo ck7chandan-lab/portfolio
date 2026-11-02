@@ -1,6 +1,148 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "clarion-view-centauri",
+    "title": "Clarion View - Centauri",
+    "status": "published",
+    "featured": false,
+    "client": "Innova Solutions Pvt Ltd",
+    "category": "",
+    "domain": "Healthcare",
+    "year": "2026",
+    "date": "2026-11-02",
+    "role": "Principal UI/UX Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-2obkk-cover-8slh9.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-00-clarion-view-me2j9.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-01-context-5mzsu.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-02-problem-6tnel.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-03-role-process-5d6f7.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-04-user-research-6s644.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-05-research-to-insight-73xs6.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-06-personas-59pl5.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-07-information-architecture-6h5zb.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-08-user-flows-67rcm.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-09-wireframes-7zt6g.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-10-solution-ai-approach-8imew.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-11-the-solution-progressive-disclosure-7rjst.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-12-four-key-design-decisions-8ty2u.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-13-risk-adjustment-agent-8zjma.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-14-outpatient-summary-agent-83nwe.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-15-patient-view-87ezn.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-16-patient-view-mobile-77bpy.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-17-validation-impact-6dee2.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-18-what-i-learned-6rxe7.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-2obkk-thank-you-71tml.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "design-system",
     "title": "Design System",
     "status": "published",
