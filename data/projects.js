@@ -1,6 +1,231 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
+    "slug": "dashboards-saas-enterprise",
+    "title": "Dashboards - SAAS Enterprise",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "",
+    "year": "2026",
+    "date": "2026-11-02",
+    "role": "",
+    "tools": [],
+    "tags": [],
+    "summary": "",
+    "cover": "",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-4-1j6fr.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-5-2b7x1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-6-11q3u.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-3-bu4zl.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-2-fibcr.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-1grzg-1-ly2o5.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/dashboards-saas-enterprise-7-1f45a.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/dashboards-saas-enterprise-8-g43ob.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "aqualogica-ux-case-study",
+    "title": "Aqualogica UX Case Study",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2022",
+    "date": "2026-11-02",
+    "role": "Sr. UI/UX Designer and UX Researcher",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-5oxxc-cover-0dfsr.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-1-z4uwb.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-2-z41w6.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-3-xhpfa.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-4-y6psy.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-5-z7sfy.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-6-zhf2t.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-7-x5mjj.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-8-y84kh.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-9-ybt77.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-10-0nxk1.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-11-08f4e.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-12-yu4nd.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-13-z9dtq.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-14-07rps.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-15-02ctt.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-16-0mfss.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-17-zq29u.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-18-0g6xm.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-5oxxc-19-y4v5g.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "clarion-view-centauri",
     "title": "Clarion View - Centauri",
     "status": "published",
@@ -234,142 +459,6 @@ window.CK_DATA["data/projects.json"] = [
       {
         "type": "image",
         "image": "/assets/uploads/untitled-8x3m6-thank-you-yee2o.png",
-        "caption": "",
-        "width": "full"
-      }
-    ],
-    "link": ""
-  },
-  {
-    "slug": "aqualogica-ux-case-study",
-    "title": "Aqualogica UX Case Study",
-    "status": "published",
-    "featured": false,
-    "client": "",
-    "category": "",
-    "domain": "E-commerce",
-    "year": "2022",
-    "date": "2026-11-02",
-    "role": "Sr. UI/UX Designer and UX Researcher",
-    "tools": [
-      "Figma"
-    ],
-    "tags": [],
-    "summary": "",
-    "cover": "/assets/uploads/untitled-5oxxc-cover-0dfsr.jpg",
-    "bg": "",
-    "modules": [
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-1-z4uwb.png",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-2-z41w6.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-3-xhpfa.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-4-y6psy.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-5-z7sfy.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-6-zhf2t.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-7-x5mjj.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-8-y84kh.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-9-ybt77.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-10-0nxk1.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-11-08f4e.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-12-yu4nd.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-13-z9dtq.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-14-07rps.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-15-02ctt.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-16-0mfss.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-17-zq29u.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-18-0g6xm.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-5oxxc-19-y4v5g.png",
         "caption": "",
         "width": "full"
       }
