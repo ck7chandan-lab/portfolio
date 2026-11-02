@@ -1,5 +1,93 @@
 [
   {
+    "slug": "tdc-ux-case-study",
+    "title": "TDC - UX Case Study",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "E-commerce",
+    "year": "2022-2023",
+    "date": "2026-11-02",
+    "role": "Sr. UI/UX Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-xfdl6-cover-m282k.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-xfdl6-1-8qt9i.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-2-2s1hc.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-3-ma7sg.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-4-pn5ub.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-5-n4b9x.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-6-o7wir.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-7-ovhl6.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-8-oh1zh.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-9-pgmky.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-10-qb1h1.png",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/tdc-ux-case-study-11-nq5ii.png",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
     "slug": "kind-life-ux-kind-life",
     "title": "Kind Life - UX Kind Life",
     "status": "published",
