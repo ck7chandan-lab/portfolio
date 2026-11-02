@@ -3,7 +3,7 @@ window.CK_DATA["data/projects.json"] = [
   {
     "slug": "pactera-job-portal-dashboard",
     "title": "Pactera - Job Portal Dashboard",
-    "status": "draft",
+    "status": "published",
     "featured": false,
     "client": "",
     "category": "",
