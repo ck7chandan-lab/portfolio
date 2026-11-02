@@ -12,7 +12,11 @@ window.CK_DATA["data/projects.json"] = [
     "date": "2026-11-02",
     "role": "Principal UI/UX Designer",
     "tools": [
-      "Figma"
+      "Figma",
+      "Perplexity",
+      "Copilate",
+      "Google Stich",
+      "Chat GPT"
     ],
     "tags": [],
     "summary": "",
