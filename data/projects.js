@@ -395,6 +395,15 @@ window.CK_DATA["data/projects.json"] = [
     "modules": [
       {
         "type": "image",
+        "image": "/assets/uploads/dashboards-saas-enterprise-starzen-incident-command-operator-dashbo-j95sf.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "divider"
+      },
+      {
+        "type": "image",
         "image": "/assets/uploads/untitled-1grzg-4-1j6fr.jpg",
         "caption": "",
         "width": "full"
