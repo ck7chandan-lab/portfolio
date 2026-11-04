@@ -1,76 +1,6 @@
 window.CK_DATA = window.CK_DATA || {};
 window.CK_DATA["data/projects.json"] = [
   {
-    "slug": "astrotalk-case-study",
-    "title": "AstroTalk Case Study",
-    "status": "published",
-    "featured": false,
-    "client": "",
-    "category": "",
-    "domain": "Astrology",
-    "year": "2023",
-    "date": "2026-11-04",
-    "role": "UI/UX Designer",
-    "tools": [
-      "Figma"
-    ],
-    "tags": [],
-    "summary": "",
-    "cover": "/assets/uploads/untitled-7n1st-cover-rs9dr.jpg",
-    "bg": "",
-    "modules": [
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-7n1st-1-q16jp.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-7n1st-2-qmu95.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-7n1st-3-qbf8p.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-7n1st-4-r5xoo.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-7n1st-5-rbaim.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-7n1st-6-rpwd5.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-7n1st-7-rt4un.jpg",
-        "caption": "",
-        "width": "full"
-      },
-      {
-        "type": "image",
-        "image": "/assets/uploads/untitled-7n1st-8-qhhls.jpg",
-        "caption": "",
-        "width": "full"
-      }
-    ],
-    "link": ""
-  },
-  {
     "slug": "aqualogica-ux-case-study",
     "title": "Aqualogica UX Case Study",
     "status": "published",
@@ -1409,6 +1339,76 @@ window.CK_DATA["data/projects.json"] = [
       {
         "type": "image",
         "image": "/assets/uploads/untitled-hj5oh-cs-12-thank-you-3wm2v.jpg",
+        "caption": "",
+        "width": "full"
+      }
+    ],
+    "link": ""
+  },
+  {
+    "slug": "astrotalk-case-study",
+    "title": "AstroTalk Case Study",
+    "status": "published",
+    "featured": false,
+    "client": "",
+    "category": "",
+    "domain": "Astrology",
+    "year": "2023",
+    "date": "2026-11-04",
+    "role": "UI/UX Designer",
+    "tools": [
+      "Figma"
+    ],
+    "tags": [],
+    "summary": "",
+    "cover": "/assets/uploads/untitled-7n1st-cover-rs9dr.jpg",
+    "bg": "",
+    "modules": [
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7n1st-1-q16jp.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7n1st-2-qmu95.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7n1st-3-qbf8p.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7n1st-4-r5xoo.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7n1st-5-rbaim.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7n1st-6-rpwd5.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7n1st-7-rt4un.jpg",
+        "caption": "",
+        "width": "full"
+      },
+      {
+        "type": "image",
+        "image": "/assets/uploads/untitled-7n1st-8-qhhls.jpg",
         "caption": "",
         "width": "full"
       }
