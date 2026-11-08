@@ -1778,7 +1778,7 @@ window.CK_DATA["data/projects.json"] = [
     "featured": false,
     "client": "",
     "category": "",
-    "domain": "Gamificatio",
+    "domain": "Gamification",
     "year": "2019 to 2022",
     "date": "2026-11-02",
     "role": "UI/UX Designer, Frontend Developer",
