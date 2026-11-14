@@ -803,7 +803,7 @@ window.CK_DATA["data/projects.json"] = [
     "featured": false,
     "client": "",
     "category": "",
-    "domain": "Jobs",
+    "domain": "Jobs, Dahsboard",
     "year": "2024",
     "date": "2026-11-02",
     "role": "Sr. Product Designer",
