@@ -1487,7 +1487,7 @@ window.CK_DATA["data/projects.json"] = [
     "featured": false,
     "client": "",
     "category": "",
-    "domain": "",
+    "domain": "Insurance",
     "year": "2024",
     "date": "2026-11-01",
     "role": "",
