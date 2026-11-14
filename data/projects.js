@@ -1425,13 +1425,13 @@ window.CK_DATA["data/projects.json"] = [
     "link": ""
   },
   {
-    "slug": "untitled-8zxvv",
-    "title": "Untitled project",
+    "slug": "source-my-trip-train-ai-powered",
+    "title": "Source My Trip Train - AI Powered",
     "status": "published",
     "featured": false,
     "client": "",
     "category": "",
-    "domain": "",
+    "domain": "Travel /Train Ticket",
     "year": "2026",
     "date": "2026-11-01",
     "role": "",
@@ -1443,7 +1443,7 @@ window.CK_DATA["data/projects.json"] = [
     "modules": [
       {
         "type": "image",
-        "image": "/assets/uploads/untitled-8zxvv-1-y2xrz.png",
+        "image": "/assets/uploads/untitled-8zxvv-1-nyomx.png",
         "caption": "",
         "width": "full"
       },
