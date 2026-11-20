@@ -135,7 +135,7 @@ window.CK_DATA["data/resume.json"] = {
       "issuer": "Interaction Design Foundation",
       "detail": "92%",
       "url": "https://ixdf.org/members/chandan-kumar-3/certificate/course/1bc36b0c-9bd8-4b8f-b2f4-779047fa1401",
-      "image": "/assets/uploads/image-course-certificate-ai-for-designers-0owny.jpg"
+      "image": "/assets/uploads/image-course-certificate-user-research-methods-8a5uv.jpg"
     }
   ],
   "projects": [
